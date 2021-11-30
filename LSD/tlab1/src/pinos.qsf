@@ -1,0 +1,9 @@
+set_location_assignment PIN_C10 -to A[0]
+set_location_assignment PIN_C11 -to A[1]
+set_location_assignment PIN_D12 -to A[2]
+set_location_assignment PIN_C12 -to A[3]
+
+set_location_assignment PIN_B14 -to S[0]
+set_location_assignment PIN_F15 -to S[1]
+
+set_location_assignment PIN_A8 -to R

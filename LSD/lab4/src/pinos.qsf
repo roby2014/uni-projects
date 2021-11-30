@@ -1,0 +1,19 @@
+# IN
+set_location_assignment PIN_C10 -to A[3]
+set_location_assignment PIN_C11 -to A[2]
+set_location_assignment PIN_D12 -to A[1]
+set_location_assignment PIN_C12 -to A[0]
+set_location_assignment PIN_A12 -to B[7]
+set_location_assignment PIN_B12 -to B[6]
+set_location_assignment PIN_A13 -to B[5]
+set_location_assignment PIN_A14 -to B[4]
+set_location_assignment PIN_B14 -to OP
+
+
+# OUT
+set_location_assignment PIN_A8 -to R[3]
+set_location_assignment PIN_A9 -to R[2]
+set_location_assignment PIN_A10 -to R[1]
+set_location_assignment PIN_B10 -to R[0]
+set_location_assignment PIN_D13 -to CyBw
+set_location_assignment PIN_C13 -to OV

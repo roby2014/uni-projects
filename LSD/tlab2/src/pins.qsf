@@ -1,0 +1,26 @@
+#input
+set_location_assignment PIN_D12 -to Y[3] # sw 2
+set_location_assignment PIN_C12 -to Y[2] # sw 3
+set_location_assignment PIN_A12 -to Y[1] # sw 4
+set_location_assignment PIN_B12 -to Y[0] # sw 5
+set_location_assignment PIN_A13 -to W[3] # sw 6
+set_location_assignment PIN_A14 -to W[2] # sw 7
+set_location_assignment PIN_B14 -to W[1] # sw 8
+set_location_assignment PIN_F15 -to W[0] # sw 9
+
+# key 1 is a7
+set_location_assignment PIN_B8 -to OP[2] # key 0 
+set_location_assignment PIN_C10 -to OP[1] # sw 0
+set_location_assignment PIN_C11 -to OP[0] # sw 1
+
+
+#leds
+set_location_assignment PIN_A9 -to GE # led 1
+set_location_assignment PIN_A10 -to P # led 2
+set_location_assignment PIN_B10 -to Z # led 3
+set_location_assignment PIN_D13 -to OV # led 4
+set_location_assignment PIN_C13 -to CyBw # led 5
+set_location_assignment PIN_E14 -to F[3] # led 6
+set_location_assignment PIN_D14 -to F[2] # led 7
+set_location_assignment PIN_A11 -to F[1] # led 8 
+set_location_assignment PIN_B11 -to F[0] # led 9
