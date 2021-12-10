@@ -12,7 +12,7 @@ fun Canvas.drawGame(g: Game) {
         erase()
         drawSpaceship(g.ship)
         drawShots(g.alienShots, g.ship.shot)
-        drawHitBoxes(g.alienShots, g.ship) // for debugging, uncomment this line for visible hit boxes
+        //drawHitBoxes(g.alienShots, g.ship) // for debugging, uncomment this line for visible hit boxes
     } else {
         drawText(g.area.w / 2 - 100, g.area.h - 8, "Game over", RED, 33)
     }
