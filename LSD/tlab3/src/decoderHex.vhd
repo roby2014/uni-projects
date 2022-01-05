@@ -1,0 +1,26 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+
+ENTITY decoderHex IS
+	PORT (
+		A : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		clear : IN STD_LOGIC;
+		HEX0 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
+END decoderHex;
+
+ARCHITECTURE logicFuntion OF decoderHex IS
+
+	COMPONENT int7seg
+		PORT (
+			d : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			dOut : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+		);
+	END COMPONENT;
+	SIGNAL HEX0t : STD_LOGIC_VECTOR(7 DOWNTO 0);
+
+BEGIN
+
+	HEX0 <= HEX0t WHEN clear = '0' ELSE
+		"11111111";
+	U0 : int7seg PORT MAP(A, HEX0t);
+END logicFuntion;
