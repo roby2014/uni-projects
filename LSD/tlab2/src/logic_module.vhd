@@ -1,85 +1,81 @@
-library ieee;
-use ieee.STD_LOGIC_1164.all;
+LIBRARY ieee;
+USE ieee.STD_LOGIC_1164.ALL;
+ENTITY logic_module IS
+	PORT (
+		W : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		Y : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		OP : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 
-
-entity logic_module is 
-	port(
-		W: in std_logic_vector(3 downto 0);
-		Y: in std_logic_vector(3 downto 0);
-		OP: in std_logic_vector(1 downto 0);
-		
-		S: out std_logic_vector(3 downto 0)
+		S : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
-end logic_module;
+END logic_module;
+ARCHITECTURE arq OF logic_module IS
 
+	COMPONENT logic_and PORT (
+		A, B : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+		);
+	END COMPONENT;
 
-architecture arq of logic_module is
+	COMPONENT logic_or PORT (
+		A, B : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+		);
+	END COMPONENT;
 
-component logic_and port(
-		A, B: in std_logic_vector(3 downto 0);
-		O: out std_logic_vector(3 downto 0)
+	COMPONENT logic_xor PORT (
+		A, B : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+		);
+	END COMPONENT;
+
+	COMPONENT logic_not PORT (
+		A : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+		);
+	END COMPONENT;
+
+	COMPONENT logic_mux PORT (
+		Mand, Mor, Mxor, Mnot : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		OP : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		S : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+		);
+	END COMPONENT;
+
+	SIGNAL sa, so, sx, sn : STD_LOGIC_VECTOR(3 DOWNTO 0);
+
+BEGIN
+
+	uand : logic_and PORT MAP(
+		A => W,
+		B => Y,
+		O => sa
 	);
-end component;
 
-component logic_or port(	
-		A, B: in std_logic_vector(3 downto 0);
-		O: out std_logic_vector(3 downto 0)
+	uor : logic_or PORT MAP(
+		A => W,
+		B => Y,
+		O => so
 	);
-end component;
 
-component logic_xor port(	
-		A, B: in std_logic_vector(3 downto 0);
-		O: out std_logic_vector(3 downto 0)
+	uxor : logic_xor PORT MAP(
+		A => W,
+		B => Y,
+		O => sx
 	);
-end component;
 
-component logic_not port(	
-		A: in std_logic_vector(3 downto 0);
-		O: out std_logic_vector(3 downto 0)
+	unot : logic_not PORT MAP(
+		A => W,
+		O => sn
 	);
-end component;
 
-component logic_mux port(
-		Mand, Mor, Mxor, Mnot: in std_logic_vector(3 downto 0);
-		OP: in std_logic_vector(1 downto 0);
-		S: out std_logic_vector(3 downto 0)
+	umux : logic_mux PORT MAP(
+		Mand => sa,
+		Mor => so,
+		Mxor => sx,
+		Mnot => sn,
+		OP => OP,
+		S => S
 	);
-end component;
-	
-signal sa, so, sx, sn: std_logic_vector(3 downto 0);
 
-begin
-
-uand: logic_and port map (
-	A => W, 
-	B => Y, 
-	O => sa
-);
-	
-uor: logic_or port map (
-	A => W, 
-	B => Y, 
-	O => so
-);
-	
-uxor: logic_xor port map (
-	A => W, 
-	B => Y, 
-	O => sx
-);
-	
-unot: logic_not port map (
-	A => W, 
-	O => sn
-);
-
-umux: logic_mux port map (
-	Mand => sa,
-	Mor => so,
-	Mxor => sx,
-	Mnot => sn,
-	OP => OP,
-	S => S
-);
-
-end arq;
+END arq;

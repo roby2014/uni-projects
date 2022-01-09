@@ -1,19 +1,19 @@
-library ieee;
-use ieee.STD_LOGIC_1164.all;
+LIBRARY ieee;
+USE ieee.STD_LOGIC_1164.ALL;
 
-entity full_adder is 
-	port(
-		A: in std_logic;
-		B: in std_logic;
-		Cin: in std_logic;
-		
-		S: out std_logic;
-		Cout: out std_logic
+ENTITY full_adder IS
+	PORT (
+		A : IN STD_LOGIC;
+		B : IN STD_LOGIC;
+		Cin : IN STD_LOGIC;
+
+		S : OUT STD_LOGIC;
+		Cout : OUT STD_LOGIC
 	);
-end full_adder;
+END full_adder;
 
-architecture arq_full_adder of full_adder is
-begin
-	S <= A xor B xor Cin;
-	Cout <= (A and B) or (Cin and (A xor B));
-end arq_full_adder;
+ARCHITECTURE arq_full_adder OF full_adder IS
+BEGIN
+	S <= A XOR B XOR Cin;
+	Cout <= (A AND B) OR (Cin AND (A XOR B));
+END arq_full_adder;

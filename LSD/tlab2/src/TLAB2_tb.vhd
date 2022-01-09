@@ -1,145 +1,144 @@
 -- testbench
 
 LIBRARY IEEE;
-use IEEE.std_logic_1164.all;
+USE IEEE.std_logic_1164.ALL;
 
-entity TLAB4_tb is
-end TLAB4_tb;
+ENTITY TLAB4_tb IS
+END TLAB4_tb;
 
-architecture teste of TLAB4_tb is
-component ALU
-  port(W, Y : in STD_LOGIC_VECTOR(3 downto 0);
-	   OP : in STD_LOGIC_vector(2 downto 0);
-	   F : out STD_LOGIC_vector(3 downto 0);
-	   CyBw, OV, Z, P, GE : out STD_LOGIC
-  );
-end component;
+ARCHITECTURE teste OF TLAB4_tb IS
+	COMPONENT ALU
+		PORT (
+			W, Y : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			OP : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+			F : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+			CyBw, OV, Z, P, GE : OUT STD_LOGIC
+		);
+	END COMPONENT;
 
-signal W, Y : std_logic_vector(3 downto 0);
-signal OP : std_logic_vector(2 downto 0);
-signal F : std_logic_vector(3 downto 0);
-signal CyBw, OV, Z, P, GE : std_logic;
+	SIGNAL W, Y : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL OP : STD_LOGIC_VECTOR(2 DOWNTO 0);
+	SIGNAL F : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL CyBw, OV, Z, P, GE : STD_LOGIC;
 
-begin
+BEGIN
 
-U0 : ALU port map (
-	W => W, 
-	Y => Y, 
-	OP => OP, 
-	F => F, 
-	CyBw => CyBw, 
-	OV => OV, 
-	Z => Z, 
-	P => P, 
-	GE => GE
-);
+	U0 : ALU PORT MAP(
+		W => W,
+		Y => Y,
+		OP => OP,
+		F => F,
+		CyBw => CyBw,
+		OV => OV,
+		Z => Z,
+		P => P,
+		GE => GE
+	);
 
-process
+	PROCESS
 
--- dados da tabela pdf enunciado
-begin
- W <= "1010"; 
- Y <= "0101"; 
- OP <= "100";
- wait for 10 ns;
+		-- dados da tabela pdf enunciado
+	BEGIN
+		W <= "1010";
+		Y <= "0101";
+		OP <= "100";
+		WAIT FOR 10 ns;
 
- W <= "1010"; 
- Y <= "1101"; 
- OP <= "100";
- wait for 10 ns;
+		W <= "1010";
+		Y <= "1101";
+		OP <= "100";
+		WAIT FOR 10 ns;
 
- W <= "0110"; 
- Y <= "0101"; 
- OP <= "100";
- wait for 10 ns;
+		W <= "0110";
+		Y <= "0101";
+		OP <= "100";
+		WAIT FOR 10 ns;
 
- W <= "1010"; 
- Y <= "1010"; 
- OP <= "100";
- wait for 10 ns;
+		W <= "1010";
+		Y <= "1010";
+		OP <= "100";
+		WAIT FOR 10 ns;
 
- W <= "1010"; 
- Y <= "0101"; 
- OP <= "101";
- wait for 10 ns;
+		W <= "1010";
+		Y <= "0101";
+		OP <= "101";
+		WAIT FOR 10 ns;
 
- W <= "1010"; 
- Y <= "1101"; 
- OP <= "101";
- wait for 10 ns;
+		W <= "1010";
+		Y <= "1101";
+		OP <= "101";
+		WAIT FOR 10 ns;
 
- W <= "0110"; 
- Y <= "0101"; 
- OP <= "101";
- wait for 10 ns;
+		W <= "0110";
+		Y <= "0101";
+		OP <= "101";
+		WAIT FOR 10 ns;
 
- W <= "1010"; 
- Y <= "1010"; 
- OP <= "101";
- wait for 10 ns;
+		W <= "1010";
+		Y <= "1010";
+		OP <= "101";
+		WAIT FOR 10 ns;
 
- W <= "1010"; 
- Y <= "0101"; 
- OP <= "110";
- wait for 10 ns;
+		W <= "1010";
+		Y <= "0101";
+		OP <= "110";
+		WAIT FOR 10 ns;
 
- W <= "1010"; 
- Y <= "1101"; 
- OP <= "110";
- wait for 10 ns;
+		W <= "1010";
+		Y <= "1101";
+		OP <= "110";
+		WAIT FOR 10 ns;
 
- W <= "0110"; 
- Y <= "0101"; 
- OP <= "110";
- wait for 10 ns;
+		W <= "0110";
+		Y <= "0101";
+		OP <= "110";
+		WAIT FOR 10 ns;
 
- W <= "1010"; 
- Y <= "1010"; 
- OP <= "110";
- wait for 10 ns;
+		W <= "1010";
+		Y <= "1010";
+		OP <= "110";
+		WAIT FOR 10 ns;
 
- W <= "1010"; 
- Y <= "0101"; 
- OP <= "111";
- wait for 10 ns;
+		W <= "1010";
+		Y <= "0101";
+		OP <= "111";
+		WAIT FOR 10 ns;
 
- W <= "1010"; 
- Y <= "1101"; 
- OP <= "111";
- wait for 10 ns;
+		W <= "1010";
+		Y <= "1101";
+		OP <= "111";
+		WAIT FOR 10 ns;
 
- W <= "0110"; 
- Y <= "0101"; 
- OP <= "111";
- wait for 10 ns;
+		W <= "0110";
+		Y <= "0101";
+		OP <= "111";
+		WAIT FOR 10 ns;
 
- W <= "1010"; 
- Y <= "1010"; 
- OP <= "111";
- wait for 10 ns;
+		W <= "1010";
+		Y <= "1010";
+		OP <= "111";
+		WAIT FOR 10 ns;
 
- W <= "1011"; 
- Y <= "1101"; 
- OP <= "000";
- wait for 10 ns;
+		W <= "1011";
+		Y <= "1101";
+		OP <= "000";
+		WAIT FOR 10 ns;
 
- W <= "1011"; 
- Y <= "1101"; 
- OP <= "001";
- wait for 10 ns;
+		W <= "1011";
+		Y <= "1101";
+		OP <= "001";
+		WAIT FOR 10 ns;
 
- W <= "1011"; 
- Y <= "1101"; 
- OP <= "010";
- wait for 10 ns;
+		W <= "1011";
+		Y <= "1101";
+		OP <= "010";
+		WAIT FOR 10 ns;
 
- W <= "1011"; 
- Y <= "1101"; 
- OP <= "011";
+		W <= "1011";
+		Y <= "1101";
+		OP <= "011";
+		WAIT;
 
+	END PROCESS;
 
-wait;
-
-end process;
-
-end teste;
+END teste;

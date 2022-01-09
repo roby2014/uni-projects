@@ -1,17 +1,14 @@
-library ieee;
-use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
 
-
-entity logic_xor is
-	port(	
-		A: in std_logic_vector(3 downto 0);
-		B: in std_logic_vector(3 downto 0);
-		O: out std_logic_vector(3 downto 0)
-);
-end logic_xor;
-
-
-architecture arq of logic_xor is
-begin
-	O <= A xor B;
-end arq;
+ENTITY logic_xor IS
+	PORT (
+		A : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		B : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+	);
+END logic_xor;
+ARCHITECTURE arq OF logic_xor IS
+BEGIN
+	O <= A XOR B;
+END arq;

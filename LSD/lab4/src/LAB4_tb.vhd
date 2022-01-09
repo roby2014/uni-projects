@@ -1,48 +1,49 @@
 LIBRARY IEEE;
-use IEEE.std_logic_1164.all;
+USE IEEE.std_logic_1164.ALL;
 
-entity LAB4_tb is
-end LAB4_tb;
+ENTITY LAB4_tb IS
+END LAB4_tb;
 
-architecture teste of LAB4_tb is
-component tlab4
-  port(A, B : in STD_LOGIC_VECTOR(3 downto 0);
-	   OP : in STD_LOGIC;
-	   R : out STD_LOGIC_VECTOR(3 downto 0);
-	   CyBw, OV : out STD_LOGIC
-  );
-end component;
-
-signal A, B : std_logic_vector(3 downto 0);
-signal OP : std_logic;
-signal R : std_logic_vector(3 downto 0);
-signal CyBw, OV : std_logic;
-
-begin
-
-U0 : tlab4 port map (
-			A => A, 
-			B => B, 
-			OP => OP, 
-			R => R, 
-			CyBw => CyBw, 
-			OV => OV
+ARCHITECTURE teste OF LAB4_tb IS
+	COMPONENT tlab4
+		PORT (
+			A, B : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			OP : IN STD_LOGIC;
+			R : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+			CyBw, OV : OUT STD_LOGIC
 		);
+	END COMPONENT;
 
-process
-begin
- A <= "0101"; 
- B <= "1101"; 
- OP <= '0';
- wait for 10 ns;
+	SIGNAL A, B : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL OP : STD_LOGIC;
+	SIGNAL R : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL CyBw, OV : STD_LOGIC;
 
- A <= "0101"; 
- B <= "1101"; 
- OP <= '1';
- wait for 10 ns;
+BEGIN
 
-wait;
+	U0 : tlab4 PORT MAP(
+		A => A,
+		B => B,
+		OP => OP,
+		R => R,
+		CyBw => CyBw,
+		OV => OV
+	);
 
-end process;
+	PROCESS
+	BEGIN
+		A <= "0101";
+		B <= "1101";
+		OP <= '0';
+		WAIT FOR 10 ns;
 
-end teste;
+		A <= "0101";
+		B <= "1101";
+		OP <= '1';
+		WAIT FOR 10 ns;
+
+		WAIT;
+
+	END PROCESS;
+
+END teste;

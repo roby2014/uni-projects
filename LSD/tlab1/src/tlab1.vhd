@@ -1,51 +1,48 @@
-library ieee;
-use ieee.STD_LOGIC_1164.all;
+LIBRARY ieee;
+USE ieee.STD_LOGIC_1164.ALL;
 
-entity tlab1 is 
-	port(
-		A: in std_logic_vector(3 downto 0); -- num funcionario
-		R: out std_logic; 						-- cancela
-		S: in std_logic_vector(1 downto 0) 	-- seletor
+ENTITY tlab1 IS
+	PORT (
+		A : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- num funcionario
+		R : OUT STD_LOGIC; -- cancela
+		S : IN STD_LOGIC_VECTOR(1 DOWNTO 0) -- seletor
 	);
-end tlab1;
+END tlab1;
 
-architecture main of tlab1 is
+ARCHITECTURE main OF tlab1 IS
 
--- identifica->verifica (bits departamento)
-signal x: std_logic_vector(3 downto 0);
+	-- identifica->verifica (bits departamento)
+	SIGNAL x : STD_LOGIC_VECTOR(3 DOWNTO 0);
 
--- identifica departamento
-component identifica
-	port(
-		A : in std_logic_vector(3 downto 0); 	-- num funcionario
-		D: out std_logic_vector(3 downto 0) 	-- departamento
+	-- identifica departamento
+	COMPONENT identifica
+		PORT (
+			A : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- num funcionario
+			D : OUT STD_LOGIC_VECTOR(3 DOWNTO 0) -- departamento
+		);
+	END COMPONENT;
+
+	-- verifica se pertence ao departamento (MUX)
+	COMPONENT verifica
+		PORT (
+			S : IN STD_LOGIC_VECTOR(1 DOWNTO 0); -- seletor
+			D : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- departamento
+			R : OUT STD_LOGIC --cancela
+		);
+	END COMPONENT;
+BEGIN
+
+	-- verifica dep
+	u_identifica : identifica PORT MAP(
+		A => A,
+		D => x
 	);
-end component;
 
--- verifica se pertence ao departamento (MUX)
-component verifica
-	port(
-		S: in std_logic_vector(1 downto 0); -- seletor
-		D: in std_logic_vector(3 downto 0); -- departamento
-		R: out std_logic 							--cancela
+	-- mux
+	u_verifica : verifica PORT MAP(
+		S => S,
+		D => x,
+		R => R
 	);
-end component;
 
-
-begin
-
--- verifica dep
-u_identifica: identifica port map (
-	A => A,
-	D => x
-);
-
--- mux
-u_verifica: verifica port map (
-	S => S,
-	D => x,
-	R => R
-);
-		
-end main;
-	
+END main;

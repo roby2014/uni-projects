@@ -1,20 +1,19 @@
-library ieee;
-use ieee.STD_LOGIC_1164.all;
+LIBRARY ieee;
+USE ieee.STD_LOGIC_1164.ALL;
 
-entity verifica is 
-	port(
-		R: out std_logic; 						-- cancela
-		D: in std_logic_vector(3 downto 0); -- departamento
-		S: in std_logic_vector(1 downto 0) 	-- seletor
+ENTITY verifica IS
+	PORT (
+		R : OUT STD_LOGIC; -- cancela
+		D : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- departamento
+		S : IN STD_LOGIC_VECTOR(1 DOWNTO 0) -- seletor
 	);
-end verifica;
+END verifica;
 
 -- abrir a cancela só e só se o departamento for igual ao seletor do mux
-architecture arq_verifica of verifica is
-begin
-	R <=  ((not(S(0)) and not(S(1)) 	and D(0)) 	-- 00
-		or (not(S(0)) 	and S(1) 		and D(1))	-- 01
-		or (S(0) 		and not(S(1)) 	and D(2)) 	-- 10
-		or (S(0) 		and S(1) 		and D(3)));	-- 11
-end arq_verifica;
-	
+ARCHITECTURE arq_verifica OF verifica IS
+BEGIN
+	R <= ((NOT(S(0)) AND NOT(S(1)) AND D(0)) -- 00
+		OR (NOT(S(0)) AND S(1) AND D(1)) -- 01
+		OR (S(0) AND NOT(S(1)) AND D(2)) -- 10
+		OR (S(0) AND S(1) AND D(3))); -- 11
+END arq_verifica;

@@ -1,23 +1,22 @@
-library ieee;
-use ieee.STD_LOGIC_1164.all;
+LIBRARY ieee;
+USE ieee.STD_LOGIC_1164.ALL;
 
-entity flags is 
-	port(
-		A: in std_logic;
-		B: in std_logic;
-		Cout: in std_logic;
-		
-		OP: in std_logic;
-		S: in std_logic;
-		
-		CyBw: out std_logic;
-		OV: out std_logic
+ENTITY flags IS
+	PORT (
+		A : IN STD_LOGIC;
+		B : IN STD_LOGIC;
+		Cout : IN STD_LOGIC;
+
+		OP : IN STD_LOGIC;
+		S : IN STD_LOGIC;
+
+		CyBw : OUT STD_LOGIC;
+		OV : OUT STD_LOGIC
 	);
-end flags;
+END flags;
 
-architecture arq_flags of flags is
-begin
-	CyBw <= Cout xor OP;
-	OV <= (not(A) and not(B) and S) or (A and B and not(S));
-end arq_flags;
-	
+ARCHITECTURE arq_flags OF flags IS
+BEGIN
+	CyBw <= Cout XOR OP;
+	OV <= (NOT(A) AND NOT(B) AND S) OR (A AND B AND NOT(S));
+END arq_flags;

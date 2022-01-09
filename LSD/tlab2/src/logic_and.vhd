@@ -1,17 +1,13 @@
-library ieee;
-use ieee.std_logic_1164.all;
-
-
-entity logic_and is
-	port(	
-		A: in std_logic_vector(3 downto 0);
-		B: in std_logic_vector(3 downto 0);
-		O: out std_logic_vector(3 downto 0)
-);
-end logic_and;
-
-
-architecture arq of logic_and is
-begin
-	O <= A and B;
-end arq;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+ENTITY logic_and IS
+	PORT (
+		A : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		B : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+	);
+END logic_and;
+ARCHITECTURE arq OF logic_and IS
+BEGIN
+	O <= A AND B;
+END arq;

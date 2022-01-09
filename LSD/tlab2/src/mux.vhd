@@ -1,22 +1,18 @@
-library ieee;
-use ieee.STD_LOGIC_1164.all;
+LIBRARY ieee;
+USE ieee.STD_LOGIC_1164.ALL;
+ENTITY mux IS
+	PORT (
+		R : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		S : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		sel : IN STD_LOGIC;
 
-
-entity mux is 
-	port(
-		R: in std_logic_vector(3 downto 0);
-		S: in std_logic_vector(3 downto 0);
-		sel: in std_logic;
-		
-		F: out std_logic_vector(3 downto 0)
+		F : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
-end mux;
-
-
-architecture arq of mux is
-begin
-F(0) <= ( sel and R(0)) or (not sel and S(0));
-F(1) <= ( sel and R(1)) or (not sel and S(1));
-F(2) <= ( sel and R(2)) or (not sel and S(2));
-F(3) <= ( sel and R(3)) or (not sel and S(3));
-end arq;
+END mux;
+ARCHITECTURE arq OF mux IS
+BEGIN
+	F(0) <= (sel AND R(0)) OR (NOT sel AND S(0));
+	F(1) <= (sel AND R(1)) OR (NOT sel AND S(1));
+	F(2) <= (sel AND R(2)) OR (NOT sel AND S(2));
+	F(3) <= (sel AND R(3)) OR (NOT sel AND S(3));
+END arq;

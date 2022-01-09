@@ -1,44 +1,39 @@
-library ieee;
-use ieee.STD_LOGIC_1164.all;
+LIBRARY ieee;
+USE ieee.STD_LOGIC_1164.ALL;
 
-entity tlab1_tb is 
-end tlab1_tb;
+ENTITY tlab1_tb IS
+END tlab1_tb;
 
-architecture teste of tlab1_tb is
+ARCHITECTURE teste OF tlab1_tb IS
 
-component tlab1 port(
-		A: in std_logic_vector(3 downto 0); 
-		D: out std_logic_vector(3 downto 0)
-);
-end component;
+	COMPONENT tlab1 PORT (
+		A : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		D : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+		);
+	END COMPONENT;
 
-signal A: std_logic_vector(3 downto 0);
-SIGNAL D: std_logic_vector(3 downto 0);
+	SIGNAL A : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL D : STD_LOGIC_VECTOR(3 DOWNTO 0);
 
-begin
+BEGIN
 
-U0 : tlab1 port map (A => A, D => D);
+	U0 : tlab1 PORT MAP(A => A, D => D);
+	PROCESS
+	BEGIN
+		A <= "0101";
+		D(0) <= (NOT(A(1)) AND A(2) AND NOT(A(3))) OR (NOT(A(3)) AND A(0) AND NOT(A(1)))
+		OR (A(0) AND A(1) AND A(2)) OR (NOT(A(0)) AND NOT(A(1)) AND NOT(A(2)) AND A(3)) OR
+		(NOT(A(0)) AND A(1) AND NOT(A(2)) AND NOT(A(3)));
 
+		WAIT FOR 10 ns;
 
-process
-begin
- A <= "0101";
- D(0) <= (not(A(1)) and A(2) and not(A(3))) or (not(A(3)) and A(0) and not(A(1)))
-		or ( A(0) and A(1) and A(2)) or ( not(A(0)) and not(A(1)) and not(A(2)) and A(3)) or
-		(not(A(0)) and A(1) and not(A(2)) and not(A(3)));
- 
- wait for 10 ns;
+		A <= "0111";
+		D(0) <= (NOT(A(1)) AND A(2) AND NOT(A(3))) OR (NOT(A(3)) AND A(0) AND NOT(A(1)))
+		OR (A(0) AND A(1) AND A(2)) OR (NOT(A(0)) AND NOT(A(1)) AND NOT(A(2)) AND A(3)) OR
+		(NOT(A(0)) AND A(1) AND NOT(A(2)) AND NOT(A(3)));
 
- A <= "0111";
- D(0) <= (not(A(1)) and A(2) and not(A(3))) or (not(A(3)) and A(0) and not(A(1)))
-		or ( A(0) and A(1) and A(2)) or ( not(A(0)) and not(A(1)) and not(A(2)) and A(3)) or
-		(not(A(0)) and A(1) and not(A(2)) and not(A(3)));
+		WAIT;
 
-wait;
+	END PROCESS;
 
-end process;
-
-
-
-end teste;
-	
+END teste;

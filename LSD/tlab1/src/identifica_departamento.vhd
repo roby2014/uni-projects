@@ -1,35 +1,34 @@
-library ieee;
-use ieee.STD_LOGIC_1164.all;
+LIBRARY ieee;
+USE ieee.STD_LOGIC_1164.ALL;
 
-entity identifica is 
-	port(
-		A: in std_logic_vector(3 downto 0); -- num funcionario
-		D: out std_logic_vector(3 downto 0) -- departamento
+ENTITY identifica IS
+	PORT (
+		A : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- num funcionario
+		D : OUT STD_LOGIC_VECTOR(3 DOWNTO 0) -- departamento
 	);
-end identifica;
+END identifica;
 
 -- identificar o departamento do funcionario
-architecture arq_identifica of identifica is
-begin
-	D(0) <= (	(not(A(1)) 	and A(2) 		and not(A(3)))
-				or (A(0)			and not(A(1))	and not(A(3)))
-				or (A(0) 		and A(1) 		and A(2)) 
-				or (not(A(0)) 	and not(A(1)) 	and not(A(2)) and A(3)) 
-				or (not(A(0)) 	and A(1) 		and not(A(2)) and not(A(3))));
-	
-	D(1) <= (	(not(A(0)) 	and not(A(2)) 	and not(A(3)))
-				or (not(A(0)) 	and A(1) 		and not(A(3)) )
-				or (A(1) 		and not(A(2)) 	and not(A(3)))
-				or (A(0) 		and not(A(1)) 	and A(2)));
-		
-	D(2)  <= (	(A(0) 		and not(A(1)) and not(A(2))) 
-				or (not(A(0)) 	and not(A(1)) and A(2)) 
-				or (not(A(0)) 	and not(A(2)) and A(3)));
-		
-	D(3) <= (	(not(A(0)) 	and A(2) 		and A(3)) 
-				or (not(A(1)) 	and A(2) 		and A(3))
-				or (A(1) 		and A(2) 		and not(A(3)))
-				or (A(0) 		and not(A(2)) 	and A(3))
-				or (not(A(0)) 	and not(A(1)) 	and not(A(2)) and not(A(3))));
-end arq_identifica;
-	
+ARCHITECTURE arq_identifica OF identifica IS
+BEGIN
+	D(0) <= ((NOT(A(1)) AND A(2) AND NOT(A(3)))
+	OR (A(0) AND NOT(A(1)) AND NOT(A(3)))
+	OR (A(0) AND A(1) AND A(2))
+	OR (NOT(A(0)) AND NOT(A(1)) AND NOT(A(2)) AND A(3))
+	OR (NOT(A(0)) AND A(1) AND NOT(A(2)) AND NOT(A(3))));
+
+	D(1) <= ((NOT(A(0)) AND NOT(A(2)) AND NOT(A(3)))
+	OR (NOT(A(0)) AND A(1) AND NOT(A(3)))
+	OR (A(1) AND NOT(A(2)) AND NOT(A(3)))
+	OR (A(0) AND NOT(A(1)) AND A(2)));
+
+	D(2) <= ((A(0) AND NOT(A(1)) AND NOT(A(2)))
+	OR (NOT(A(0)) AND NOT(A(1)) AND A(2))
+	OR (NOT(A(0)) AND NOT(A(2)) AND A(3)));
+
+	D(3) <= ((NOT(A(0)) AND A(2) AND A(3))
+	OR (NOT(A(1)) AND A(2) AND A(3))
+	OR (A(1) AND A(2) AND NOT(A(3)))
+	OR (A(0) AND NOT(A(2)) AND A(3))
+	OR (NOT(A(0)) AND NOT(A(1)) AND NOT(A(2)) AND NOT(A(3))));
+END arq_identifica;

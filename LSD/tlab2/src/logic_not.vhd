@@ -1,16 +1,12 @@
-library ieee;
-use ieee.std_logic_1164.all;
-
-
-entity logic_not is
-	port(	
-		A: in std_logic_vector(3 downto 0);
-		O: out std_logic_vector(3 downto 0)
-);
-end logic_not;
-
-
-architecture arq of logic_not is
-begin
-	O <= not(A);
-end arq;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+ENTITY logic_not IS
+	PORT (
+		A : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		O : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+	);
+END logic_not;
+ARCHITECTURE arq OF logic_not IS
+BEGIN
+	O <= NOT(A);
+END arq;
