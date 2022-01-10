@@ -1,0 +1,29 @@
+# input
+set_location_assignment PIN_C10 -to Tempo[0]
+set_location_assignment PIN_C11 -to Tempo[1]
+set_location_assignment PIN_D12 -to Tempo[2]
+set_location_assignment PIN_C12 -to Tempo[3]
+set_location_assignment PIN_A12 -to B
+set_location_assignment PIN_B12 -to reset
+
+# output (leds)
+# colors
+set_location_assignment PIN_A8 -to A
+set_location_assignment PIN_A9 -to EP
+set_location_assignment PIN_A10 -to E
+set_location_assignment PIN_B10 -to VP
+set_location_assignment PIN_D13 -to V
+# bits num
+set_location_assignment PIN_C13 -to Q[0]
+set_location_assignment PIN_E14 -to Q[1]
+set_location_assignment PIN_D14 -to Q[2]
+set_location_assignment PIN_A11 -to Q[3]
+# digital seg 7
+set_location_assignment PIN_C14 -to HEX0[0]
+set_location_assignment PIN_E15 -to HEX0[1]
+set_location_assignment PIN_C15 -to HEX0[2]
+set_location_assignment PIN_C16 -to HEX0[3]
+set_location_assignment PIN_E16 -to HEX0[4]
+set_location_assignment PIN_D17 -to HEX0[5]
+set_location_assignment PIN_C17 -to HEX0[6]
+set_location_assignment PIN_D15 -to HEX0[7]
