@@ -1,5 +1,5 @@
 # LSD projects
-### All the projects use VHDL and ModelSim (Intel Quartus Prime)
+### All the projects use VHDL and ModelSim
 
 ### Info
 * lab* - Practice projects (some of them are required for the evaluation projects)
