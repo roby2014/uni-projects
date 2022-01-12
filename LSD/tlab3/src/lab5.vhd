@@ -21,7 +21,7 @@ ARCHITECTURE arq OF lab5 IS
 
     -- do stor
     COMPONENT CLKDIV
-        GENERIC (div : NATURAL := 10);
+        GENERIC (div : NATURAL := 50000000);
         PORT (
             clk_in : IN STD_LOGIC;
             clk_out : OUT STD_LOGIC

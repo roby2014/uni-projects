@@ -5,6 +5,7 @@ set_location_assignment PIN_D12 -to Tempo[2]
 set_location_assignment PIN_C12 -to Tempo[3]
 set_location_assignment PIN_A12 -to B
 set_location_assignment PIN_B12 -to reset
+set_location_assignment PIN_P11 -to clk
 
 # output (leds)
 # colors

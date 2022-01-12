@@ -1,78 +1,79 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
-
+ 
 ENTITY tlab3_tb IS
 END tlab3_tb;
-
-ARCHITECTURE behavior OF tlab3_tb IS
-
-	-- Component Declaration for the Unit Under Test (UUT)
-
-	COMPONENT tlab3 IS
-		PORT (
-			clk : IN STD_LOGIC;
-			reset : IN STD_LOGIC;
-			B : IN STD_LOGIC;
-			Tempo : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-			E, A, V, EP, VP : OUT STD_LOGIC;
-			HEX0 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-			Q : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+ 
+ARCHITECTURE behavior OF tlab3_tb IS 
+ 
+    -- Component Declaration for the Unit Under Test (UUT)
+ 
+    COMPONENT tlab3 IS
+	PORT(	clk : in std_logic;
+		reset : in std_logic;
+		B : IN STD_LOGIC;
+		Tempo : IN std_logic_VECTOR(3 downto 0);
+		E, A, V, EP, VP : out std_logic;
+		HEX0 : out std_logic_vector(7 downto 0);
+		Q : out std_logic_VECTOR(3 downto 0)
 		);
 	END COMPONENT;
-	--Inputs
-	SIGNAL clk, reset, B : STD_LOGIC := '0';
-	SIGNAL Tempo : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000";
+    
 
-	--Outputs
-	SIGNAL Q : STD_LOGIC_VECTOR(3 DOWNTO 0);
-	SIGNAL E, A, V, EP, VP : STD_LOGIC;
-	SIGNAL HEX0 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    --Inputs
+    signal clk, reset, B : std_logic := '0';
+   	signal Tempo : std_logic_vector(3 downto 0) := "0000";
 
-	-- Clock period definitions
-	CONSTANT clk_period : TIME := 10 ns;
+ 	--Outputs
+	signal Q : std_logic_VECTOR(3 downto 0);
+	signal E, A, V, EP, VP : std_logic;
+	signal HEX0 : std_logic_vector(7 downto 0);
 
+   -- Clock period definitions
+   constant clk_period : time := 50000000 ns;
+ 
 BEGIN
-
+ 
 	-- Instantiate the Unit Under Test (UUT)
-	uut : tlab3 PORT MAP(
-		clk => clk,
-		reset => reset,
-		B => B,
-		Tempo => Tempo,
-		Q => Q,
-		E => E,
-		A => A,
-		V => V,
-		EP => EP,
-		VP => VP,
-		HEX0 => HEX0
-	);
+   uut: tlab3 PORT MAP (
+          clk => clk,
+		  reset => reset,
+          B => B,
+		  Tempo => Tempo,
+          Q => Q,
+          E => E,
+		  A => A,
+		  V => V,
+		  EP => EP,
+          VP => VP,
+		  HEX0 => HEX0
+        );
 
-	clk <= NOT clk AFTER 10 ns;
+	clk <= not clk after 10 ns; 
 
-	-- Stimulus process
-	stim_proc : PROCESS
-	BEGIN
-
-		WAIT FOR 20 ns;
+   -- Stimulus process
+   stim_proc: process
+   begin		
+		
+		wait for 20 ns;
 		reset <= '1';
 		Tempo <= "0100";
 		B <= '0';
-
-		WAIT FOR 20 ns;
+		
+		wait for 20 ns;
 		reset <= '0';
 		B <= '0';
-
-		WAIT FOR 100 ns;
+		
+		wait for 100 ns;
 
 		reset <= '0';
 		B <= '1';
 
-		WAIT FOR 100 ns;
+		wait for 100 ns;
 		B <= '0';
 
-		WAIT;
-
-	END PROCESS;
+		wait;
+		
+   end process;
 
 END;
