@@ -14,8 +14,9 @@ const val ALIEN_MOVE_INTERVAL = 500
 
 /**
  * Entry point of application.
- * The game has a spaceship which the player can move it horizontally with the mouse.
- * Every 250 ms, there is 50% chance of spawning a new alien shot (coming from a random alien).
+ * The game has a spaceship which the player can move it horizontally with the mouse a
+ *  and a group of aliens that move towards the spaceship while shooting.
+ * Every time the aliens move, new alien shot will be spawned (coming from a random alien).
  * The player can shoot (with the mouse or space bar) if there are no past bullets on the screen.
  * The main goal is to dodge the alien's shots and to destroy them and the aliens itself to win points.
  * If an alien shot/alien hits the player, game ends, if player destroys every alien, player wins.
