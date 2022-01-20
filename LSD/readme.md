@@ -1,5 +1,5 @@
 # LSD projects
-## All projects were implemented using ModelSim and written in VHDL
+## All projects were implemented using ModelSim and VHDL
 
 ### Info
 * lab* - Practice projects (some of them are required for the evaluation projects).
