@@ -15,3 +15,15 @@
 
 ### Warning ⚠️
 I would suggest to <b>NOT</b> rely on the reports (<i>*_relatorio.pdf</i>), because it can have misleading information and bad practices. :rofl:
+
+### Topics of this class
+* Number systems (binary, hex, octal, base n)
+* Boolean algebra
+* Boolean functions
+* Karnaugh maps
+* Combinational circuits (mux, demux, encoders, decoders)
+* Arithmetic circuits (half-adders, full-adders, ...)
+* Sequential circuits (latches, flipflops)
+* Registers and counters
+* Data control circuits (RAM, ROM)
+* VHDL
