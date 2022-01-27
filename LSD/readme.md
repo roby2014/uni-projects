@@ -16,7 +16,7 @@
 ### Warning ⚠️
 I would suggest to <b>NOT</b> rely on the reports (<i>*_relatorio.pdf</i>), because it can have misleading information and bad practices. :rofl:
 
-### Topics of this class
+### Class topics
 * Number systems (binary, hex, octal, base n)
 * Boolean algebra
 * Boolean functions
