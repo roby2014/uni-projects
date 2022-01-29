@@ -26,9 +26,8 @@ I would suggest to <b>NOT</b> rely on the reports (<i>*_relatorio.pdf</i>), beca
 * Sequential circuits (latches, flipflops)
 * Combinational circuit analysis & synthesis
 * Registers and counters
-* Memory
-* Microprogrammed control units
-* Data/Control circuits
+* Memory & microprogrammed control units (RAM, ROM)
+* Data/control circuits
 * Programmable devices: FPGA
 * Hardware Description Language: VHDL
 * Digital systems design environments: Quartus
