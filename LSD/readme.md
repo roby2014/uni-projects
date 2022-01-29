@@ -17,13 +17,18 @@
 I would suggest to <b>NOT</b> rely on the reports (<i>*_relatorio.pdf</i>), because it can have misleading information and bad practices. :rofl:
 
 ### Class topics
-* Number systems (binary, hex, octal, base n)
-* Boolean algebra
-* Boolean functions
+* Numbering systems (binary, hex, octal, base n)
+* Boolean algebra & logical simplification
+* Logic functions
 * Karnaugh maps
-* Combinational circuits (mux, demux, encoders, decoders)
-* Arithmetic circuits (half-adders, full-adders, ...)
+* Combinational circuit & design (mux, demux, encoders, decoders)
+* Binary arithmetic & arithmetic circuits (half-adders, full-adders, ...)
 * Sequential circuits (latches, flipflops)
+* Combinational circuit analysis & synthesis
 * Registers and counters
-* Data control circuits (RAM, ROM)
-* VHDL
+* Memory
+* Microprogrammed control units
+* Data/Control circuits
+* Programmable devices: FPGA
+* Hardware Description Language: VHDL
+* Digital systems design environments: Quartus
