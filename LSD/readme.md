@@ -23,7 +23,7 @@ I would suggest to <b>NOT</b> rely on the reports (<i>*_relatorio.pdf</i>), beca
 * Karnaugh maps
 * Combinational circuit & design (mux, demux, encoders, decoders)
 * Binary arithmetic & arithmetic circuits (half-adders, full-adders, ...)
-* Sequential circuits (latches, flipflops)
+* Sequential circuits (latches, flip-flops)
 * Combinational circuit analysis & synthesis
 * Registers and counters
 * Memory & microprogrammed control units (RAM, ROM)
