@@ -12,16 +12,16 @@
 * Data types (val, var, Int, Char, Boolean, String, ...)
 * Input & Output (print, readLine, ...)
 * Decision statements (if, when, ...)
-* Loops (while, do while, for, forEach, ...)
-* Functions (function arguments, lambdas, function as argument)
+* Loops (while, do while, for, forEach, repeat, ...)
+* Functions (return values, function arguments, lambdas, function as argument)
 * IntelliJ IDE and CanvasLib
-* Data classes
-* Class functions
-* Operator overload
-* Unit tests
+* Data classes (objects, class functions, ...)
+* Operator overload in kotlin
+* Unit tests with JUnit
 * Lists, Arrays, MutableList
 * Nullable types
 * Enums
+* Recursion
 * Sequential search
 * Recursive search
 
