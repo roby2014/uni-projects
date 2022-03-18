@@ -1,4 +1,4 @@
-// Multiply 2 numbers by using consecutive sums.
+// Multiplication of two natural numbers, using the consecutive sums algorithm
 
 #include <stdio.h>
 #include <stdint.h>

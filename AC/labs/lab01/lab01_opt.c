@@ -1,4 +1,5 @@
-// Multiply 2 numbers by using consecutive sums (optimized loop)
+// Multiplication of two natural numbers, using the consecutive sums algorithm
+// Optimized loop version
 
 #include <stdio.h>
 #include <stdint.h>
