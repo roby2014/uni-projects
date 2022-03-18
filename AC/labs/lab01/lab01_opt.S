@@ -15,11 +15,11 @@
 
 	mov	r2, #0
 
-    cmp r0, r1
-    bhs if
-    mov r3, r0
-    mov r0, r1
-    mov r1, r3
+	cmp r0, r1
+	bhs if
+	mov r3, r0
+	mov r0, r1
+	mov r1, r3
 
 if:
 	mov r3, #0
