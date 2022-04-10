@@ -126,4 +126,16 @@ void handle_http_response(const char* http_response) {
             case 2: {
                 FILE* fp = fopen("response.txt", "w");
                 fprintf(fp, http_response);
-                fcl
+                fclose(fp);
+                printf("-> Message printed to \"response.txt\"\n");
+                break;
+            }
+            case 3: {
+                break;
+            }
+            default: {
+                printf("Invalid option! \n\n");
+            }
+        }
+    } while (opc != 1 && opc != 2 && opc != 3);
+}
