@@ -1,9 +1,10 @@
 # AED
 
 ### Info
-* <a href="https://github.com/robyzzz/isel-projects/tree/master/AED/practice"> practice/ <a/> - Project to test & practice algorithms 
-* assignments/ - Class assignments
+* Kotlin
 
+## Projects
+* [serie01/](https://github.com/robyzzz/isel-projects/tree/master/AED/serie01/) : Project 1 [[Task](https://github.com/robyzzz/isel-projects/blob/master/AED/serie01/AED_SERIE01_ENUNCIADO.pdf)] [[Report](https://github.com/robyzzz/isel-projects/blob/master/AED/serie01/AED_RELATÓRIO.pdf)] [[Source](https://github.com/robyzzz/isel-projects/blob/master/AED/serie01/src/)]
 
 ### Class topics
 * Elementary and advanced sorting algorithms:
