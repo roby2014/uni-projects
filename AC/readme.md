@@ -1,7 +1,7 @@
 # AC
 
 ### Info
-* The language used is P16 Assembly (ARM based)
+* Language used: P16 Assembly (ARM based)
 
 ## Projects
 * [project01/](https://github.com/robyzzz/isel-projects/tree/master/AC/project01/) : Project 1 [[Task](AED_SERIE01_ENUNCIADO.pdf)] [[Report](https://github.com/robyzzz/isel-projects/blob/master/AED/serie01/AED_RELATÓRIO.pdf)] [[Source](https://github.com/robyzzz/isel-projects/blob/master/AED/serie01/src/)]

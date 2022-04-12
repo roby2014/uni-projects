@@ -1,7 +1,7 @@
 # AED
 
 ### Info
-* Kotlin
+* Language used: Kotlin
 
 ## Projects
 * [serie01/](https://github.com/robyzzz/isel-projects/tree/master/AED/serie01/) : Project 1 [[Task](https://github.com/robyzzz/isel-projects/blob/master/AED/serie01/AED_SERIE01_ENUNCIADO.pdf)] [[Report](https://github.com/robyzzz/isel-projects/blob/master/AED/serie01/AED_RELATÓRIO.pdf)] [[Source](https://github.com/robyzzz/isel-projects/blob/master/AED/serie01/src/)]
