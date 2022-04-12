@@ -1,6 +1,6 @@
 # AC
 
-### Info
+## Info
 * Language used: P16 Assembly (ARM based)
 
 ## AC Laboratory
@@ -17,7 +17,7 @@ Evaluation projects
 
 (*Credits: @roby2014 & @pedroMalaf & Carolina*)
 
-### Class topics
+## Class topics
 * Architecture of a computer
     - Computer classes
     - Organization of a computer

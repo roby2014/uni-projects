@@ -1,12 +1,12 @@
 # LSD projects
 
-### Info
+## Info
 * lab* - Practice/laboratory projects (some of them are required for the evaluation projects)
 * tlab* - Evaluation projects
 * The project tasks are described in the files which name ends with <i>*_Enunciado.pdf</i>
 * The project reports are the files which name ends with <i>*_relatorio.pdf</i>
 
-### Projects
+## Projects
 * [lab4](https://github.com/robyzzz/isel-projects/tree/master/LSD/lab4/) : ALU - Arithmetic Logic Unit [[Task](https://github.com/robyzzz/isel-projects/blob/master/LSD/lab4/LSD_2122i_LAB4_Enunciado.pdf)]
 * [lab5](https://github.com/robyzzz/isel-projects/tree/master/LSD/lab5/) : Sequential circuits - Counter [[Task](https://github.com/robyzzz/isel-projects/blob/master/LSD/lab5/LSD_2122i_LAB5_Enunciado.pdf)]
 * [tlab1](https://github.com/robyzzz/isel-projects/tree/master/LSD/tlab1/) : Combinational circuits [[Task](https://github.com/robyzzz/isel-projects/blob/master/LSD/tlab1/LSD_2122i_TLAB1_Enunciado.pdf)] [[Screenshots](https://github.com/awyxx/isel-projects/tree/master/LSD/tlab1/screenshots)] 
@@ -16,10 +16,10 @@
 
 (*Credits: @roby2014 & @pedroMalaf*)
 
-### Warning ⚠️
+## Warning ⚠️
 I would suggest to <b>NOT</b> rely on the reports (<i>*_relatorio.pdf</i>), because it can have misleading information and bad practices. :rofl:
 
-### Class topics
+## Class topics
 * Numbering systems (binary, hex, octal, base n)
 * Boolean algebra & logical simplification
 * Logic functions

@@ -1,6 +1,6 @@
 # AED
 
-### Info
+## Info
 * Language used: Kotlin
 
 ## Projects
@@ -8,7 +8,7 @@
 
 (*Credits: @roby2014 & @pedroMalaf*)
 
-### Class topics
+## Class topics
 * Elementary and advanced sorting algorithms:
   - Insertion sort
   - Selection sort
