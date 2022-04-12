@@ -8,6 +8,8 @@
 
 * [trab3](https://github.com/robyzzz/isel-projects/tree/master/PG/trab3/spaceinvaders/src/main/kotlin) : Final space invaders 2D game [[Screenshots](https://github.com/awyxx/isel-projects/tree/master/PG/trab3/screenshots)]
 
+(*Credits: @roby2014 & @pedroMalaf*)
+
 ### Class topics (Kotlin)
 * Data types (val, var, Int, Char, Boolean, String, ...)
 * Input & Output (print, readLine, ...)

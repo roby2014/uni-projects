@@ -14,6 +14,8 @@
 * [tlab3](https://github.com/robyzzz/isel-projects/tree/master/LSD/tlab3/) : Sequential circuits [[Task](https://github.com/robyzzz/isel-projects/blob/master/LSD/tlab3/LSD_2122i_TLAB3_Enunciado.pdf)] [[Screenshots](https://github.com/awyxx/isel-projects/tree/master/LSD/tlab3/screenshots)] 
 * [tlab4](https://github.com/robyzzz/isel-projects/tree/master/LSD/tlab4/) : Data Control circuits [[Task](https://github.com/robyzzz/isel-projects/blob/master/LSD/tlab4/LSD_2122i_TLAB4_Enunciado.pdf)] [[Screenshots](https://github.com/awyxx/isel-projects/tree/master/LSD/tlab4/screenshots)]  [[Results](https://github.com/robyzzz/isel-projects/tree/master/LSD/tlab4/result)]
 
+(*Credits: @roby2014 & @pedroMalaf*)
+
 ### Warning ⚠️
 I would suggest to <b>NOT</b> rely on the reports (<i>*_relatorio.pdf</i>), because it can have misleading information and bad practices. :rofl:
 
