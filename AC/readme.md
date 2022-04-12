@@ -3,8 +3,17 @@
 ### Info
 * Language used: P16 Assembly (ARM based)
 
-## Projects
-* [project01/](https://github.com/robyzzz/isel-projects/tree/master/AC/project01/) : Project 1 [[Task](AED_SERIE01_ENUNCIADO.pdf)] [[Report](https://github.com/robyzzz/isel-projects/blob/master/AED/serie01/AED_RELATÓRIO.pdf)] [[Source](https://github.com/robyzzz/isel-projects/blob/master/AED/serie01/src/)]
+## AC Laboratory
+Those are laboratory tasks, not evaluation projects.
+Usually writing things in C first then converting it to assembly makes our life easier.
+
+* [lab01](https://github.com/robyzzz/isel-projects/tree/master/AC/lab01/) : Multiplication of two natural numbers, using the consecutive sums algorithm [[Task](https://github.com/robyzzz/isel-projects/tree/master/AC/lab01/ac_lab01.pdf)] [[Code](https://github.com/robyzzz/isel-projects/tree/master/AC/lab01/)]
+## AC Projects
+Evaluation projects
+
+* [project01](https://github.com/robyzzz/isel-projects/tree/master/AC/project01/) : Temperature average in assembly 
+[[Task](https://github.com/robyzzz/isel-projects/tree/master/AC/project01/ac_trab01.pdf)] 
+[[Code](https://github.com/robyzzz/isel-projects/tree/master/AC/project01/main.S)]
 
 (*Credits: @roby2014 & @pedroMalaf & Carolina*)
 
