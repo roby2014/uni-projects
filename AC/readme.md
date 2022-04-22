@@ -1,19 +1,22 @@
 # AC
 
 ## Info
-* Language used: P16 Assembly (ARM based)
+* Language used: P16 Assembly (ARMv4 based)
 
 ## AC Laboratory
 Those are laboratory tasks, not evaluation projects.
 Usually writing things in C first then converting it to assembly makes our life easier.
 
-* [lab01](https://github.com/robyzzz/isel-projects/tree/master/AC/lab01/) : Multiplication of two natural numbers, using the consecutive sums algorithm [[Task](https://github.com/robyzzz/isel-projects/tree/master/AC/lab01/ac_lab01.pdf)] [[Code](https://github.com/robyzzz/isel-projects/tree/master/AC/lab01/)]
+* [lab01](https://github.com/roby2014/isel-projects/tree/master/AC/lab01/) : Multiplication of two natural numbers, using the consecutive sums algorithm [[Task](https://github.com/roby2014/isel-projects/tree/master/AC/lab01/ac_lab01.pdf)] [[Code](https://github.com/roby2014/isel-projects/tree/master/AC/lab01/)]
+
+* [lab02](https://github.com/roby2014/isel-projects/tree/master/AC/lab02/) : Machine code [[Task](https://github.com/roby2014/isel-projects/tree/master/AC/lab01/ac_lab02.pdf)] [[Code](https://github.com/roby2014/isel-projects/tree/master/AC/lab02/)]
+
 ## AC Projects
 Evaluation projects
 
-* [project01](https://github.com/robyzzz/isel-projects/tree/master/AC/project01/) : Temperature average in assembly 
-[[Task](https://github.com/robyzzz/isel-projects/tree/master/AC/project01/ac_trab01.pdf)] 
-[[Code](https://github.com/robyzzz/isel-projects/tree/master/AC/project01/main.S)]
+* [project01](https://github.com/roby2014/isel-projects/tree/master/AC/project01/) : Temperature average in assembly 
+[[Task](https://github.com/roby2014/isel-projects/tree/master/AC/project01/ac_trab01.pdf)] 
+[[Code](https://github.com/roby2014/isel-projects/tree/master/AC/project01/main.S)]
 
 (*Credits: @roby2014 & @pedroMalaf & Carolina*)
 

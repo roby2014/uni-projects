@@ -1,0 +1,33 @@
+P16 assembler v1.3.2 (May  7 2020)	lab02.lst	Fri Apr 22 10:09:29 2022
+
+Sections
+Index   Name            Addresses       Size
+0       .text           0000 - 000B     000C 12
+1       .data           000C - 000F     0004 4
+
+Symbols
+Name                    Type      Value      Section
+loop                    LABEL     0002 2     .text
+var1                    LABEL     000C 12    .data
+var2                    LABEL     000D 13    .data
+var2_addr               LABEL     000A 10    .text
+var3                    LABEL     000E 14    .data
+
+Code listing
+   1           	    .text
+   2 0000 40 0C	    ldr r0, var2_addr
+   3           	loop:
+   4 0002 01 08	    ldrb r1, [ r0, #0]
+   5 0004 91 A0	    add r1, r1, #1
+   6 0006 01 28	    strb r1, [ r0, #0]
+   7 0008 FC 5B	    b loop
+   8           	var2_addr:
+   9 000A 0D 00	    .word var2
+  10           	
+  11           	    .data
+  12           	var1:
+  13 000C AC	    .byte 0xAC
+  14           	var2:
+  15 000D 7E	    .byte 126
+  16           	var3:
+  17 000E 22 20	    .word 0x2022
