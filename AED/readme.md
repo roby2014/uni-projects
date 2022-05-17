@@ -1,10 +1,12 @@
 # AED
 
 ## Info
-* Language used: Kotlin
+* Programming language used: Kotlin
 
 ## Projects
 * [serie01/](https://github.com/roby2014/uni-projects/tree/master/AED/serie01/) : Project 1 [[Task](https://github.com/roby2014/uni-projects/blob/master/AED/serie01/AED_SERIE01_ENUNCIADO.pdf)] [[Report](https://github.com/roby2014/uni-projects/blob/master/AED/serie01/AED_RELATÓRIO.pdf)] [[Source](https://github.com/roby2014/uni-projects/blob/master/AED/serie01/src/)]
+
+* [serie01/](https://github.com/roby2014/uni-projects/tree/master/AED/serie01/) : Project 2 [[Task](https://github.com/roby2014/uni-projects/blob/master/AED/serie02/AED_SERIE02_ENUNCIADO.pdf)] [[Report](https://github.com/roby2014/uni-projects/blob/master/AED/serie02/AED_RELATÓRIO.pdf)] [[Source](https://github.com/roby2014/uni-projects/blob/master/AED/serie02/src/)]
 
 (*Credits: @roby2014 & @pedroMalaf*)
 
