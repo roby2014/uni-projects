@@ -12,6 +12,8 @@ Those are laboratory tasks, not evaluation projects.
 
 * [lab03](https://github.com/roby2014/uni-projects/tree/master/AC/lab03/) : I/O parallel ports [[Task](https://github.com/roby2014/uni-projects/tree/master/AC/lab03/ac_lab03.pdf)] [[Code](https://github.com/roby2014/uni-projects/tree/master/AC/lab03/lab03_sleep.S)]
 
+* [lab04](https://github.com/roby2014/uni-projects/tree/master/AC/lab04/) : CPU interrupts [[Task](https://github.com/roby2014/uni-projects/tree/master/AC/lab04/ac_lab04.pdf)] [[Code1](https://github.com/roby2014/uni-projects/tree/master/AC/lab03/ap04_ex1.S)] [[Code2](https://github.com/roby2014/uni-projects/tree/master/AC/lab03/ap04_ex2.S)]
+
 ## AC Projects
 Evaluation projects
 
