@@ -14,6 +14,8 @@ Those are laboratory tasks, not evaluation projects.
 
 * [lab04](https://github.com/roby2014/uni-projects/tree/master/AC/lab04/) : CPU interrupts [[Task](https://github.com/roby2014/uni-projects/tree/master/AC/lab04/ac_lab04.pdf)] [[Code1](https://github.com/roby2014/uni-projects/tree/master/AC/lab03/ap04_ex1.S)] [[Code2](https://github.com/roby2014/uni-projects/tree/master/AC/lab03/ap04_ex2.S)]
 
+* [lab05](https://github.com/roby2014/uni-projects/tree/master/AC/lab04/) : System clock (w/ Pico Timer Count) [[Task](https://github.com/roby2014/uni-projects/tree/master/AC/lab04/ac_lab05.pdf)] [[Code1](https://github.com/roby2014/uni-projects/tree/master/AC/lab03/lab05.S)]
+
 ## AC Projects
 Evaluation projects
 
