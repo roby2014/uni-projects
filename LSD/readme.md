@@ -5,6 +5,7 @@
 * tlab* - Evaluation projects
 * The project tasks are described in the files which name ends with <i>*_Enunciado.pdf</i>
 * The project reports are the files which name ends with <i>*_relatorio.pdf</i>
+* Credits: [@roby2014](https://github.com/roby2014) & [@pedroMalaf](https://github.com/pedroMalaf)
 
 ## Projects
 * [lab4](https://github.com/roby2014/uni-projects/tree/master/LSD/lab4/) : ALU - Arithmetic Logic Unit [[Task](https://github.com/roby2014/uni-projects/blob/master/LSD/lab4/LSD_2122i_LAB4_Enunciado.pdf)]
@@ -13,8 +14,6 @@
 * [tlab2](https://github.com/roby2014/uni-projects/tree/master/LSD/tlab2/) : Arithmetic circuits [[Task](https://github.com/roby2014/uni-projects/blob/master/LSD/tlab2/LSD_2122i_TLAB2_Enunciado.pdf)] [[Screenshots](https://github.com/roby2014/uni-projects/tree/master/LSD/tlab2/screenshots)]
 * [tlab3](https://github.com/roby2014/uni-projects/tree/master/LSD/tlab3/) : Sequential circuits [[Task](https://github.com/roby2014/uni-projects/blob/master/LSD/tlab3/LSD_2122i_TLAB3_Enunciado.pdf)] [[Screenshots](https://github.com/roby2014/uni-projects/tree/master/LSD/tlab3/screenshots)] 
 * [tlab4](https://github.com/roby2014/uni-projects/tree/master/LSD/tlab4/) : Data Control circuits [[Task](https://github.com/roby2014/uni-projects/blob/master/LSD/tlab4/LSD_2122i_TLAB4_Enunciado.pdf)] [[Screenshots](https://github.com/roby2014/uni-projects/tree/master/LSD/tlab4/screenshots)]  [[Results](https://github.com/roby2014/uni-projects/tree/master/LSD/tlab4/result)]
-
-(*Credits: @roby2014 & @pedroMalaf*)
 
 ## Warning ⚠️
 I would suggest to <b>NOT</b> rely on the reports (<i>*_relatorio.pdf</i>), because it can have misleading information and bad practices. :rofl:

@@ -2,6 +2,7 @@
 
 ## Info
 * Language used: P16 Assembly (ARM based)
+* Credits: [@roby2014](https://github.com/roby2014) & [@pedroMalaf](https://github.com/pedroMalaf) & [@crpereir](https://github.com/crpereir)
 
 ## AC Laboratory
 Those are laboratory tasks, not evaluation projects.
@@ -24,8 +25,8 @@ Evaluation projects
 [[Code](https://github.com/roby2014/uni-projects/tree/master/AC/project01/main.S)]
 * [project02](https://github.com/roby2014/uni-projects/tree/master/AC/project02/) : How a CPU works
 [[Task](https://github.com/roby2014/uni-projects/tree/master/AC/project02/ac_2122v_tp2.pdf)]
-
-(*Credits: @roby2014 & @pedroMalaf & Carolina*)
+* [project03](https://github.com/roby2014/uni-projects/tree/master/AC/project03/) : How a CPU works
+[[Task](https://github.com/roby2014/uni-projects/tree/master/AC/project03/ac_tp3.pdf)]
 
 ## Class topics
 * Architecture of a computer
