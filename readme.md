@@ -10,5 +10,7 @@
 * [AC](https://github.com/roby2014/uni-projects/tree/master/AC) - Arquitetura de Computadores  /  Computer Architecture
 * [RC](https://github.com/roby2014/uni-projects/tree/master/RC) - Redes de Computadores  /  Computer Networks
 
-*Most of the projects (task/reports) are not translated to english.*
+### Info
+*Most of the projects from this repo (task/reports) are not translated to english and keep in mind this repo is public for educational purposes, if you copy any code and use it in your school projects you may be flagged for plagiarism by automated tools..*
+
 #### repository under dev...
