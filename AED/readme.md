@@ -10,7 +10,7 @@
 
 * [Serie 02 - (Doubly) Linked lists and +](https://github.com/roby2014/uni-projects/tree/master/AED/serie02/) : Project 2 [[Task](https://github.com/roby2014/uni-projects/blob/master/AED/serie02/AED_SERIE02_ENUNCIADO.pdf)] [[Report](https://github.com/roby2014/uni-projects/blob/master/AED/serie02/AED_RELATÓRIO.pdf)] [[Source](https://github.com/roby2014/uni-projects/blob/master/AED/serie02/src/)]
 
-* [Serie 03 - Trees and Graphs](https://github.com/roby2014/uni-projects/tree/master/AED/serie03/) : Project 2 [[Task](https://github.com/roby2014/uni-projects/blob/master/AED/serie03/AED_SERIE03_ENUNCIADO.pdf)] [[Report](https://github.com/roby2014/uni-projects/blob/master/AED/serie03/AED_SERIE03_RELATÓRIO.pdf)] [[Source](https://github.com/roby2014/uni-projects/blob/master/AED/serie03/src/)]
+* [Serie 03 - Trees and Graphs](https://github.com/roby2014/uni-projects/tree/master/AED/serie03/) : Project 3 [[Task](https://github.com/roby2014/uni-projects/blob/master/AED/serie03/AED_SERIE03_ENUNCIADO.pdf)] [[Report](https://github.com/roby2014/uni-projects/blob/master/AED/serie03/AED_SERIE03_RELATÓRIO.pdf)] [[Source](https://github.com/roby2014/uni-projects/blob/master/AED/serie03/src/)]
 
 ## Class topics
 * Elementary and advanced sorting algorithms:
