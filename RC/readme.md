@@ -11,4 +11,16 @@
 
 
 ## Class topics
-* TODO
+* Introduction to computer networks: the Internet, access and core networks; Packet vs circuit switching;
+principles of latency, packet loss and throughput; Layered protocol models; TCP/IP vs OSI
+* Application layer: communication models; Web and the HTTP protocol; E-mail; Domain Name System; P2P
+applications; Video streaming and content distribution networks
+* Transport layer: multiplexagem; Conceito de ligação; Fundamentos da transferência de dados fiável
+(protocolos teóricos de recuperação de erros); UDP; TCP; princípios do controlo de congestão e controlo de
+fluxo
+* Network layer: The data plane and control plane; routers; IP protocol (datagram, fragmentation, addressing,
+NAT and IPv6 introduction)
+* Data link layer: error detection and correction; multiple access protocols; local area networks; datacenter
+network architectures
+* Physical layer: data transmission introduction (synchronism); transmission media (guided and not guided);
+connectors; Ethernet physical layer
