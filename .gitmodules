@@ -3,3 +3,6 @@
 	path = LIC/lic_project
 	url = https://github.com/pedroMalaf/Projeto-LIC.git
 	branch = master
+[submodule "LIC/lic_project"]
+	path = LIC/lic_project
+	url = https://github.com/pedroMalaf/Projeto-LIC.git
