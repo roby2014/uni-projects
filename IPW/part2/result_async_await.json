@@ -1,0 +1,7 @@
+{
+  "total_duration": 317,
+  "movies": [
+    { "id": "tt0111161", "title": "The Shawshank Redemption", "duration": 142 },
+    { "id": "tt0068646", "title": "The Godfather", "duration": 175 }
+  ]
+}

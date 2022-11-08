@@ -1,0 +1,18 @@
+{
+  "name": "ipw_a1",
+  "version": "1.0.0",
+  "description": "Assignment 1",
+  "main": "index.js",
+  "directories": {
+    "src": "src",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "type": "module",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.0.0"
+  }
+}

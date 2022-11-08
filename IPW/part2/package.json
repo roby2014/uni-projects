@@ -1,0 +1,16 @@
+{
+  "name": "ipw_a2",
+  "version": "1.0.0",
+  "description": "IPW Assignment 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "a49418",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "mocha": "^10.0.0",
+    "node-fetch": "^3.2.10"
+  }
+}
