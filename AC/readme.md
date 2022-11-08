@@ -40,7 +40,7 @@ Evaluation projects
 [[Task](./project01_2223/ac_2223i_tp1.pdf)]
 [[Code](./project01_2223/main.s)]
 
-* [project02](./project01_2223/) : How a CPU works (using Logisim)
+* [project02](./project02_2223/) : How a CPU works (using Logisim)
 [[Task](./project02_2223/ac_tp02_2223i_ENUNCIADO.pdf)]
 [[Report](./project02_2223/ac_tp02_2223i_RELATORIO.pdf)]
 
