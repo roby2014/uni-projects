@@ -1,0 +1,69 @@
+1.
+
+a) 1NF -> assumimos que os atributos são atómicosS
+2NF -> 
+F = { B -> C, { A, B } -> C }
+R0 = { _A_, B }
+R1 = { _A_, _B_, C }
+
+3NF -> Para R0 e para R1, já se encontra na 3NF
+
+
+
+b) 1NF -> todos os atributos são atómicos
+2NF -> 
+REFUGIADO(passaporterefugiado, paisrefugiado)
+VOLUNTARIO(noidvoluntario, refugiado, centro)
+CENTRO(idcentro, paiscentro)
+
+passaporterefugiado -> paisrefugiado
+idcentro -> paiscentro
+noidvoluntario -> passaporterefugiado, idcentro
+
+3NF -> passaporterefugiado, idcentro e noidvoluntario já se encontram na 3NF
+
+2
+a) AK { A, B, D } 
+
+2NF -> { G } -> { H, I } não se encontra na 2NF
+{ A, B } -> C
+{ A } -> D, E
+{ B } -> G
+{ D } -> J, K
+
+3NF -> { A, B }, { A }, { B }, { D } já se encontram na 3NF
+
+b) AK { A, B, D }
+
+2NF -> { I } -> K não se encontra na 2NF
+{ A, B } -> C
+{ B, D } -> E, G
+{ A, D } -> H, I
+{ A } -> J
+
+3NF -> { A, B }, { B, D }, { A, D }, { A } já se encontram na 3NF
+
+3.
+MUSEU(cod, nome, pais)
+QUADRO(cod, titulo, ano, autor, estilo, museu) FK. { id } ref. AUTOR, FK. { cod } ref. ESTILO, FK. { cod } ref. MUSEU
+ESTILO(cod, nome)
+AUTOR(id, bday, nome, pais)
+
+1NF -> assumimos que todos os atributossão atómicos
+
+2NF -> 
+codestilo -> nomeestilo
+codmuseu -> nomemuseu, paismuseu
+idautor -> bdayautor, nomeautor, paisautor
+codquadro -> tituloquadro, anoquadro
+
+3NF -> 
+codestilo -> nomeestilo
+codmuseu -> nomemuseu, paismuseu
+idautor -> bdayautor, nomeautor, paisautor
+codquadro -> tituloquadro, anoquadro, idautor, codestilo, codmuseu
+
+1 -> "goth"
+1 -> "jose lucio", "portugal"
+1 -> 03/06/2001, pedro, portugal
+1 -> "bola", 1994, 1, 1, 1

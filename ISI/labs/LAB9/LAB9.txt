@@ -1,0 +1,127 @@
+1.
+
+a) 
+1º -> cria-se a tabela t com 2 atributos: c (PK) e d
+2º -> cria-se a tabela s com 2 atributos: b (PK) e c (FK de t) com uma restrição (eliminar as linhas da tabela "c" automaticamente assim que as linhas 
+da tabela "t" forem eliminadas)
+3º -> cria-se a tabela r com 2 atributos: a (PK) e b (FK de s) com uma restrição (se forem apagadas as linhas da tabela "s" é colocado a null
+o valor da FK)
+
+b) Erros: A ordem de execução das funções tem de ser inversa, uma vez que as tabelas têm FK de outras.
+1º -> inserir os valores (1,1) e (2,1) na tabela t
+2º -> inserir os valores (1,1) e (2,1) na tabela s
+3º -> inserir os valores (1,1) e (2,2) na tabela r
+
+
+c) 1º -> apaga todos os campos da tabela <t>
+
+d) 
+1º -> apaga a tabela <r>
+2º -> apaga a tabela <s>
+3º -> apaga a tabela <t>
+
+obviamente que se uma tabela X tiver uma chave estrangeira doutra tabela Y, a tabela Y so pode ser apagada depois da X
+
+e)
+1º -> cria-se a tabela <t> com 2 atributos: c (PK) e d
+2º -> cria-se a tabela <s> com 2 atributos: b (PK) e c (FK de t(c))
+3º -> cria-se a tabela <r> com 2 atributos: a (PK) e b (FK de s) com uma restrição (se for apagada o atributo "c" da tabela <s> é colocado a null o valor da FK)
+
+f) 1º -> inserir os valores (2,11), (3,11) e (4,21) na tabela <t>
+
+g) 
+1º -> inserir os valores (6,3) na tabela <r>
+2º -> apaga da tabela <t> as linhas em que o atributo "c" é igual a 3 e coloca a null a chave FK da tabela <r>
+3º -> inserir os valores (2,2) na tabela <r>
+
+h)
+1º -> Erro: os valores (2,2) já se encotram na tabela <r>
+2º -> apaga da tabela <t> as linhas em que o atributo "c" é igual a 3 (neste caso nao apaga nem altera nada uma vez que não existe atributo "c" na tabela <t> com o valor 3)
+3º -> Erro: não podemos inserir o valor (11,3) na tabela <s> uma vez que não existe atributo "c" na tabela <t> com o valor 3
+
+i)
+1º -> inserir os valores (7,2) na tabela <r>
+2º -> atualiza as linhas do atributo "c" igual a 4 na tabela <t> e coloca as mesmas com o valor 5
+3º -> inserir os valores (11,3) na tabela <s>
+
+j)
+1º -> apaga da tabela <t> as linhas em que o atributo "c" é igual a 3 (neste caso nao apaga nem altera nada uma vez que não existe atributo "c" na tabela <t> com o valor 3)
+2º -> Erro: os valores (2,2) já se encotram na tabela <r>
+3º -> Erro: não podemos inserir o valor (11,3) na tabela <s> uma vez que não existe atributo "c" na tabela <t> com o valor 3
+
+2.
+- a coluna semester em section tem de ser uma estação do ano (fall ou spring)
+- a coluna year em section tem de apresentado em 2 digitos
+- a coluna grade em grade_report vai de A a F
+
+3.
+create table student(
+    student_name string,
+    student_number integer primary key,
+    student_class integer,
+    major string
+);
+
+create table course(
+    course_name string,
+    course_number string primary key,
+    credit_hours integer,
+    department string
+);
+
+create table section(
+    id integer primary key,
+    course_number
+    semester string,
+    section_year string,
+    instructor string
+    foreign key (course_number) references course(course_number)
+);
+
+create table grade_report(
+    student_number  // chave estrangeira,
+    section_id
+    grade char
+    foreign key (student_number) references student(student_number)
+    foreign key (section_id) references secttion(id)
+);
+
+create table PREREQUISITE(
+    course_number
+    prereq_number int primary key
+    foreign key (course_number) references course(course_number)
+);
+
+4.
+insert into student values ("Smith", 17, 1, "CS");
+insert into student values ("Brown", 8, 2, "CS");
+
+insert into course values ("Intro to Computer Science", "CS1310", 4, "CS");
+insert into course values ("Data Structures", "CS3320", 4, "CS");
+insert into course values ("Discrete Mathematics", "ATH2410", 3, "MATH");
+insert into course values ("Database", "CS3380", 3, "CS");
+
+insert into section values(85, "MATH2410", "Fall", "07", "King");
+insert into section values(92, "CS1310", "Fall", "07", "Anderson");
+insert into section values(102, "CS3320", "Spring", "08", "Knuth");
+insert into section values(112, "MATH2410", "Fall", "08", "Chang");
+insert into section values(119, "CS1310", "Fall", "08", "Anderson");
+insert into section values(135, "CS3320", "Fall", "08", "Stone");
+
+insert into grade_report values (17, 112, 'B');
+insert into grade_report values (17, 119, 'C');
+insert into grade_report values (8, 85, 'A');
+insert into grade_report values (8, 92, 'A');
+insert into grade_report values (8, 102, 'B');
+insert into grade_report values (8, 135, 'A');
+
+insert into PREREQUISITE values("CS3380", "CS3320");
+insert into PREREQUISITE values("CS3380", "MATH2410");
+insert into PREREQUISITE values("CS3320", "CS1310");
+
+5.
+a) insert into student (student_number, name, major, nr) values (27, ’Johnson’, ’Math’, 3);
+
+b) update course set credit_hours = 4 where department = "Math";
+
+c) delete from section where course_number = "CS1310";

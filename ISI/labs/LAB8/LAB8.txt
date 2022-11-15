@@ -1,0 +1,84 @@
+1.
+
+a) Obter o P e o R de T1 -> P  Q
+                                  10 a
+                                  15 b
+                                  25 a
+
+b) Obter o P e o R de T1 que têm P > 10 -> P  Q
+                                           15 b
+                                           25 a
+
+c) Junção de P, B e R com T1 -> P  Q  R  A  B  C
+                                10 a  5  10 b  5
+
+d) Seleção de P > 10 de T1 união com T2 -> P  Q  R
+                                           15 b  8
+                                           25 a  6
+                                           10 b  6
+                                           25 c  3
+                                           10 b  5
+
+e) Remover de T1 o que consta em T2 -> P  Q  R
+                                       10 a  5
+                                       15 b  8
+                                       25 a  6
+
+f) Junção dos elementos que verificam T1.P = T2.A -> P  Q  R  A  B  C
+                                                     10 a  5  10 b  6
+                                                     10 a  5  10 b  5
+                                                     25 a  6  25 c  3
+
+g) Junção dos elementos que verificam T1.P = T2.A e T1.R = T2.C -> P  Q  R  A  B  C
+                                                                   10 a  5  10 b  5
+
+h) Junção externa à esquerda dos elementos que verificam T1.P = T2.A -> P  Q  R  A    B     C
+                                                                        10 a  5  10   b     6
+                                                                        15 b  8  null null  null
+                                                                        25 a  6  25   c     3
+
+i) Para cada valor de B, realizar a média para o seu respetivo valor em A -> A  B
+                                                                             10 a
+                                                                             25 c
+
+2.
+
+b) A -> Franklin / T / Wong / 333445555 / 1955-12-08 / 638 Voss, Houston, TX / M / 40000 / 888665555 / 5 -> ssn
+                                                                                                            333445555
+
+RESULT -> lname   / fname
+          Smith   / Jonh
+          Narayan / Ramesh
+          English / Joyce
+
+c) A -> dno / salary -> dnumber / avgsal
+        1   / 55000       1     / 55000
+        4   / 31000       4     / 31000
+        5   / 33250       5     / 33250
+
+RESULT -> dnumber / dname          / avgsal     
+            1     / headquarters   / 55000
+            4     / administration / 31000
+            5     / research       / 33250
+
+d) A -> ssn
+        {}
+
+RESULT -> lname / fname
+          {}   / {}
+
+3. 
+
+F = agregação
+
+a) π(fname, lname)(σ(fname = dependent_name)DEPENDENT) -> {}
+
+b) π(pname, plocation) (PROJECT * ((pno) F (sum (hours) ) WORKS_ON) ) -> 
+
+d) ( (σ( SEX = F ) EMPLOYEE) ) F (average (salary) ) EMPLOYEE)
+
+f) A <- EMPLOYEE * DEPARTEMENT
+B <- σ( ssn = mgr_ssn) A)
+C <- B * DEPENDENT
+D <- σ( ssn != essn) C)
+π(fname, lname) D

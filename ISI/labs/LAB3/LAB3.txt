@@ -1,0 +1,83 @@
+1)
+
+PACIENTE(cc, morada, idade, medico)
+pk: cc
+fk: medico -> MEDICO.cc
+
+MEDICO(cc, nome, especialidade, anos_exp)
+pk: cc
+
+LABORATORIO(nome, n_telefone) : R1
+pk: nome
+
+MEDICAMENTO(n_comercial, subst_ativa, lab, preço, farmacia)
+pk: n_comercial
+fk: lab -> LABORATORIO.nome
+fk: farmacia -> FARMACIA.morada
+
+FARMACIA(nome, morada, n_telefone, )
+chave candidata: morada, n_telefone
+
+RECEITA_DADA(medico, paciente, receita)
+pk e fk: medico -> MEDICO.cc
+pk e fk: paciente -> PACIENTE.cc
+fk: receita -> RECEITA.id
+
+RECEITA(id, data, quantidade, medicamento)
+pk: id
+fk: medicamento -> MEDICAMENTO.n_comercial
+
+CONTRATO(lab, farmacia, data_inicio, data_fim, texto, supervisor)
+pk e fk: lab -> LABORATORIO.nome
+pk e fk: farmacia -> FARMACIA.morada
+fk: supervisor -> MEDICO.cc
+
+
+
+
+R1: Caso um laboratorio deixe de existir, os dados dos 
+medicamentos produzir pelo mesmo serão apagados.
+
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+2)
+
+AIRPORT(airport_code, city, state, name)
+pk: airport_code
+
+AIRPLANE_TYPE(type_name, max_seats, company)
+pk: type_name
+
+AIRPLANE(airplane_id, type_name, total_no_of_seats)
+pk: airplane_id
+fk: type_name -> AIRPLANE_TYPE.type_name
+
+FLIGHT(number, airline, weekdays)
+pk: number
+
+FLIGHT_LEG(leg_no, flight_number, airport_code, scheduled_dep_time, scheduled_arr_time)
+pk: leg_no
+pk e fk: flight_number -> FLIGHT
+fk: airport_code -> AIRPORT
+
+FARE(code, flight_number, restrictions, amount)
+pk: code
+pk e fk: flight_number -> FLIGHT
+
+LEG_INSTANCE(date, leg_no, airplane_id, no_of_avail_seats, dep_time, arr_time) 
+pk: date
+pk e fk: leg_no -> FLIGHT_LEG.leg_no
+fk: airplane_id -> AIRPLANE
+
+SEAT(seat_no, leg_inst_date, customer_name, cphone)
+pk: seat_no
+pk e fk: leg_inst_date -> LEG_INSTANCE
+
+CAN_LAND(airport_code, type_name)
+pk e fk: airport_code -> AIRPORT
+pk e fk: type_name -> AIRPLANE_TYPE
+

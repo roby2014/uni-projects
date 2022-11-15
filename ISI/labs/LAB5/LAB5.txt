@@ -1,0 +1,127 @@
+1.
+
+A -> F, porque a DF { A -> C } é falsa visto que 10 -> c1 não é compatível com 11 -> c1
+
+B -> V
+
+C -> F, porque a DF { C -> A} é falsa visto que c1 -> 10 não é compatível com c1 -> 11
+
+2.
+
+A -> F, porque a DF { cod -> {descrição, preço} } é falsa visto que 10 -> { 20GB, $10 } não é
+compatível com 10 -> { 20GB, $5 }
+
+B -> F, porque é necessário haver R(_cod_, descrição) para definir a DF { cod -> descrição }
+
+C -> F, porque a DF { {cod, descrição} -> preço } é falsa visto que {10, 20GB} -> $10 não é compatível
+com {10, 20GB} -> $5
+
+D -> V
+
+3.
+
+A, C, D -> F, visto que do lado direito da seta os únicos atributos que não constam são o A e E, logo
+esses 2 necessitam necessariamente de estar na chave candidata.
+
+B -> V
+
+4.A
+
+A -> F, visto que a duração da prova (dtprova) não define o número da prova (noprova)
+
+B -> F, visto que na relação "noaluno, coddisciplina, noprova, dtprova -> nota",  "noprova" não pode definir
+nota uma vez que a única chave é "noprova"
+
+C -> V
+
+D -> F, porque para a relação noaluno, coddisciplina -> nota ser verdadeira, é necessária a chave "noprova"
+para definir "prova"
+
+5 tuplos para C:
+
+49412 -> Vasco, vasco@gmail
+101 -> Matemática
+49412, 101, 1 -> 8
+1 -> 120
+
+49123 -> Roberto, roberto@gmail
+101 -> Matemática
+49123, 101, 1 -> 15
+1 -> 120
+
+49321 -> Pedro, pedro@gmail
+101 -> Matemática
+49321, 101, 1 -> 18,5
+1 -> 120
+
+49111 -> Jeremias, jeremias@gmail
+101 -> Matemática
+49111, 101, 1 -> 8
+1 -> 120
+
+49333 -> Maria, maria@gmail
+101 -> Matemática
+49333, 101, 1 -> 8
+1 -> 120
+
+4.B
+
+CANDIDATO(siglacandidatura, numcandidato, nomecandidato)
+DOADOR(iddoador, nome)
+PAIS(idodador, codpais, nomepais, capital)
+DOADOR_PESSOA(iddoador, dtnascimento)
+DOADOR_EMPRESA(iddoador, capitalsocialempresa)
+DOACAO(iddoaçao, iddoador, siglacandidatura, valordoaçao)
+
+A -> F, porque a relaçãop "iddoador -> nome, codpais, nomepais, capital" é falsa visto que os atributos "nomepais" e "capital"
+são identificados por "codpais" e não por iddoador
+
+B -> F, porque a relação "iddoador -> nome, dtnascimento, codpais" é falsa uma vez que o atributo "dtnascimento" pertence a uma
+relação separada "iddoador -> dtnascimento"
+
+C -> V
+
+D -> F, porque a relação "iddoador -> nome, dtnascimento, codpais, capitalsocialempresa" é falsa visto que
+"capitalsocialempresa" pertence a uma relação separada "iddoador -> capitalsocialempresa"
+
+5 tuplos para C:
+
+49412 -> Vasco, 351
+49412 -> Lisboa
+49412 -> 15/07/2003
+101   -> 49412, JB, 20
+JB    -> 1234
+1234  -> Joe Biden, 20/3/1940
+351   -> Portugal, Lisboa
+
+49111 -> Roberto, 351
+49111 -> Lisboa
+49111 -> 15/02/2000
+123   -> 49111, DT, 100
+DT    -> 1111
+1111  -> Donald Trump, 2/4/1960
+351   -> Portugal, Lisboa
+
+49222 -> Pedro, 351
+49222 -> Lisboa
+49222 -> 10/07/1920
+111   -> 49222, JB, 1000000
+JB    -> 2222
+1234  -> Joe Biden, 20/3/1940
+351   -> Portugal, Lisboa
+
+49444 -> Jeremias, 351
+49444 -> Lisboa
+49444 -> 15/05/2010
+222   -> 49412, JB, 2
+JB    -> 1111
+1234  -> Donald Trump, 20/3/1940
+351   -> Portugal, Lisboa
+
+49555 -> Maria, 351
+49555 -> Lisboa
+49555 -> 20/08/1999
+333   -> 49412, HC, 20
+HC    -> 5555
+1234  -> Hary Clinton, 20/3/1940
+351   -> Portugal, Lisboa
