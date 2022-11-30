@@ -23,4 +23,7 @@
 
 *iii)* *I don't consider myself a brilliant university student, so don't expect everything to be 100% correct in these projects/reports.*
 
+### Tasks
+**Tasks were removed to avoid any copyright issues.**
+
 #### repository under dev...
