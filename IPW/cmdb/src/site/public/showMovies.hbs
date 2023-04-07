@@ -1,0 +1,20 @@
+<a href="/home">Home</a>
+
+<h2>Movies</h2>
+
+{{#each movies}}
+    <head>Title: {{this.title}}</head>
+    <p>Rank: {{this.rank}}</p>
+    <p>Id: {{this.id}}</p>
+    <p>Year: {{this.year}}</p>
+    <p>Rating: {{this.imDbRating}}</p>
+    <p>Cast: {{this.crew}}</p> 
+    <img src="{{this.image}}" alt="Cover">
+    <p></p>
+   
+{{/each}}
+<div style=" position:absolute;right: 10px;top:10px;">
+        <form  action="/name/movies/" method="get" onsubmit="location.href = this.action + this.mn.value; return false">
+            <input type="text" name="mn" id="mn" placeholder="Insert a Movie Name" required>
+            <button class="float-left submit-button">Go</button>
+        </form

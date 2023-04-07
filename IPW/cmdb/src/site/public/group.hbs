@@ -1,0 +1,63 @@
+    <a href="/home">HOME</a>
+
+
+    <h2>Grupo: {{name}}</h2>
+        <p>Id: {{id}}</p>
+        <p>Name: {{name}}</p>
+        <p>Description: {{description}}</p>
+        <p>Movies:
+        {{#each movies}}
+        
+                <li><a href="/ids/movies/{{this.id}}">Title:{{this.title}}</a>
+                <form action="/groups/{{id}}/movies/delete" method="post">
+                <input type="hidden" name="groupId" id="groupId" value="{{../id}}">
+                <input type="hidden" name="movieId" id="movieId" value="{{this.id}}"placeholder="Insert a Movie Id">
+                <input type="submit" value="Remove">
+                </form></li>
+        {{/each}}
+        </p>
+
+
+<body>
+<h2>Update Group</h2>
+    <form action="/groups/update" method="post">
+            <input type="hidden" name="id" id="id" value="{{id}}" placeholder="Insert a Group Id">
+            New Name: <input type="text" name="newName" id="newName" placeholder="Insert a New Name"  required/>
+            New Description: <input type="text" name="newDesc" id="newDesc" placeholder="Insert a New Description" required>
+        <input type="submit" value="Go">
+    </form>
+</body>
+
+<body>
+    <h2>Delete Group</h2>
+    <form action="/groups/delete" method="post">
+     <input type="hidden" name="id" id="id" value="{{id}}">
+     <input type="submit" value="Delete" onclick="return confirm('Are you sure?')">
+    </form>
+</body>
+
+<body>
+    <h2>Add Movie to Group</h2>
+    <form action="/groups/{{id}}/movies/add" method="post">
+    <input type="hidden" name="groupId" id="groupId" value="{{id}}">
+    Movie Id: <input type="text" name="movieId" id="movieId" placeholder="Insert a Movie Id" required>
+    <input type="submit" value="Go">
+    </form>
+</body>
+
+<body>
+    <h2>Remove Movie from Group</h2>
+    <form action="/groups/{{id}}/movies/delete" method="post">
+    <input type="hidden" name="groupId" id="groupId" value="{{id}}">
+    Movie Id: <input type="text" name="movieId" id="movieId" placeholder="Insert a Movie Id" required>
+    <input type="submit" value="Go">
+    </form>
+</body>
+
+<div style=" position:absolute;right: 10px;top:10px;">
+        <form  action="/name/movies/" method="get" onsubmit="location.href = this.action + this.mn.value; return false">
+            <input type="text" name="mn" id="mn" placeholder="Insert a Movie Name" required>
+            <button class="float-left submit-button">Go</button>
+        </form
+
+

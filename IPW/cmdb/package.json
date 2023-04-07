@@ -1,0 +1,45 @@
+{
+  "name": "cmdb-ipw-leic-2223i-ipw32d-g12",
+  "version": "1.0.0",
+  "description": "Chelas Movies API",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node src/server.js",
+    "dev": "nodemon --exec npm start"
+  },
+  "directories": {
+    "src": "src",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isel-leic-ipw/cmdb-ipw-leic-2223i-ipw32d-g12.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isel-leic-ipw/cmdb-ipw-leic-2223i-ipw32d-g12/issues"
+  },
+  "homepage": "https://github.com/isel-leic-ipw/cmdb-ipw-leic-2223i-ipw32d-g12#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "elasticsearch": "^16.7.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mocha": "^10.1.0",
+    "node-fetch": "^3.2.10",
+    "nodemon": "^2.0.20",
+    "passport": "^0.6.0",
+    "hbs": "^4.2.0",
+    "session-file-store": "^1.5.0",
+    "supertest": "^6.3.3",
+    "swagger-ui": "^4.15.5",
+    "swagger-ui-express": "^4.6.0",
+    "yamljs": "^0.3.0"
+  },
+  "type": "module"
+}

@@ -1,0 +1,609 @@
+openapi: '3.0.2'
+info:
+  title: Chelas Movies API
+  version: '1.0'
+servers:
+  - description: Localhost for API 
+    url: http://localhost:8080
+
+tags:
+  - name: Groups
+  - name: Movies
+  - name: Users
+paths:
+  /popularmovies:
+    get:
+      tags:
+        - Movies
+      summary: Get's the Most Popular Movies
+      operationId: getPopularMovies
+      parameters:
+        - name: limit
+          in: query
+          description: The number of Popular Movies wanted 
+          required: false
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Return of Popular Movies successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movies'
+
+        '400':
+          description: Invalid limit 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+            description: Server Error
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+        '502':
+            description: Problem with gateway
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+  /movies/:id:
+    get:
+      tags:
+        - Movies
+      summary: Get's movies by the name
+      operationId: getMoviesByName
+      parameters:
+        - name: id
+          in: path
+          description: Movie ID
+          required: true
+          schema: 
+            type: integer
+      responses:
+        '200': 
+            description: Return of the Movie successful
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Movie'
+        '400':
+            description: Invalid Movie ID
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+        '500':
+            description: Server Error
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+        '502':
+            description: Problem with gateway
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+  /movies/:moviename:
+    get:
+      tags:
+        - Movies
+      summary: Get's movies by the name
+      operationId: getMoviesByName
+      parameters:
+        - name: moviename
+          in: path
+          description: Name of the moviename
+          required: true
+          schema: 
+            type: string
+        - name: max
+          in: query
+          description: Maximum number of movies wanted
+          required: false
+          schema:
+            type: integer
+      responses:
+        '200': 
+            description: Return of the Movies successful
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Movie'
+        '400':
+            description: Invalid limit or Invalid Movie name
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+        '500':
+            description: Server Error
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+        '502':
+            description: Problem with gateway
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+  /group:
+    get:  
+      tags:
+        - Groups
+      summary: Get's all Groups
+      operationId: getAllGroups
+      responses:
+        '200':
+          description: All groups returned with success
+        '401': 
+          description: Not authorized entry
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+            description: Server Error
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+        '502':
+            description: Problem with gateway
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+    post:
+      tags:
+        - Groups
+      summary: Create a new Group
+      operationId: createGroup
+      requestBody: 
+        description: Group with name and description
+        
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewGroup'
+        required: true
+      responses:
+        '201':
+          description: A new Group was created with success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Group'
+        '400':
+          description: Invalid group body
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+            description: Server Error
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+        '502':
+            description: Problem with gateway
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+  /group/:id:
+    get:
+      tags:
+        - Groups
+      summary: Get's group by given id
+      operationId: getGroup
+      parameters:
+        - name: groupId
+          in: path
+          description: Id of the requested group
+          required: true
+          schema:
+            type: string
+      responses:
+        '200': 
+          description: Group was returned with success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Group'
+        '400':
+          description: Invalid Id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+            description: Server Error
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+        '502':
+            description: Problem with gateway
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+    put:
+      tags:
+        - Groups
+      summary: Update an existing Group's name and/or description
+      operationId: UpdateGroup
+      parameters:
+        - name: groupId
+          in: path
+          description: Id of the Group to be updated
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Body with new Name and/or new Description
+        content:
+         application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateGroup'
+      responses:
+        '200':
+          description: Group updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Group'
+        '400':
+         description: Invalid group id 
+         content:
+           application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+        '404':
+          description: Group was not found
+          content:
+            application/json:
+             schema:
+              $ref: '#/components/schemas/Error'
+        '500':
+            description: Server Error
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+        '502':
+            description: Problem with gateway
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+    delete:
+      tags:
+        - Groups
+      summary: Deletes a group
+      operationId: deleteGroup
+      parameters:
+        - name: groupId
+          in: path
+          description: Id of the group to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Group was deleted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteGroup'
+        '400':
+          description: Invalid groupId
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+            description: Server Error
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+        '502':
+            description: Problem with gateway
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+  /group/:groupId/movie/:movieId:
+      put:
+        tags:
+          - Groups
+        summary: Add a movie to a group
+        operationId: addMovieToGroup
+        parameters:
+          - name: groupId
+            in: path
+            description: Id of the group to add the movie
+            required: true
+            schema:
+              type: string
+          - name: movieId
+            in: path
+            description: Id of the movie to add 
+            required: true
+            schema:
+              type: string
+        responses:
+          '200':
+            description: The movie was added to the grup with success
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Group'
+          '400':
+            description: Invalid groupId and/or movieId
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+          '404':
+            description: Group or Movie not found
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+          '500':
+            description: Server Error
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+          '502':
+            description: Problem with gateway
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+      delete: 
+        tags:
+         - Groups
+        summary: Remove a movie from a group
+        operationId: removeMovieFromGroup
+        parameters:
+          - name: groupId
+            in: path
+            description: Id of the Group that contains the Movie to remove
+            required: true
+            schema:
+              type: string  
+          - name: movieId
+            in: path
+            description: Id of the movie to remove
+            required: true
+            schema:
+              type: string
+        responses:
+          '200':
+            description: Movie was removed from the group with success
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Group'
+          '400':
+            description: Invalid Group Id or Movie id
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+          '404':
+            description: Group and/or Movie not found
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+          '500':
+            description: Server Error
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+          '502':
+            description: Problem with gateway
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Error'
+  /user: 
+    post:
+      tags:
+        - Users 
+      summary: Create a new User
+      operationId: createUser
+      requestBody:
+        description: User object to add
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          description: User was added with success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Token'
+        '400':
+          description: Invalid body of user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: User to add already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '502':
+          description: Problem with gateway
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /user/:userId:  
+    get:
+      tags:
+        - Users  
+      summary: Get the user with the given Id
+      operationId: getUser
+      parameters:
+        - name: userId
+          in: path
+          description: Id of the requested user
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: User was found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid User Id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: User was not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '502':
+          description: Problem with gateway
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    NewGroup:
+      type: object
+      required:
+        - name
+        - description
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+    Group:
+      type: object
+      required:
+        - id
+        - name
+        - description
+        - userId's
+        - movieList
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        userId's:
+          type: array
+          items: 
+            type: string
+        movieList:
+            $ref: '#/components/schemas/Movies'
+
+    Error:
+      type: object
+      required:
+        - code
+        - msg
+      properties:
+        code:
+          type: integer
+        msg:
+          type: string
+     
+    UpdateGroup:
+      type: object
+      required:
+        - name
+        - description
+      properties:
+        name: 
+          type: string
+        description:
+          type: string
+
+    DeleteGroup:
+      type: object
+      required: 
+      - status
+
+    User:
+      type: object
+      required:
+      - username
+      - id
+      properties:
+        username:
+          type: string
+        id:
+          type: string
+
+    Token:
+      type: object
+      required:
+        - token
+      properties:
+        token:
+          type: string
+
+    Movies:
+      type: array
+      items: 
+        $ref: '#/components/schemas/Movie' 
+
+    Movie:
+      type: object
+      required:
+        - Id
+        - title
+        - duration
+      properties:
+          Id:
+            type: string
+          title:
+            type: string
+          duration:
+            type: integer

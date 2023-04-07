@@ -1,0 +1,37 @@
+
+
+<a href="/home">Home</a>
+<body>
+    <h2>Popular Movies
+    </h2>
+    
+    <form action="/popular/movies" method="get">
+        <input type="number" name="nr" value="1" placeholder="insert a limit">
+        <button class="float-left submit-button">Go</button>
+    </form>
+
+  </body>
+
+  <p></p>
+  <body>
+    <h2>Search Movie by Name</h2>
+    <form action="/name/movies/" method="get" onsubmit="location.href = this.action + this.mn.value; return false">
+        <input type="text" name="mn" id="mn" placeholder="Insert a Movie Name" required>
+        <button class="float-left submit-button">Go</button>
+    </form>
+    
+  </body>
+
+  <body>
+    <h2>Search Movie by Id</h2>
+    <form action="/id/movies/" method="get" onsubmit="location.href = this.action + this.movieId.value; return false">
+        <input type="text" name="movieId" id="movieId" placeholder="Insert Movie Id" required>
+        <button type="submit" >Go</button>
+    </form>
+  </body>
+
+  <div style=" position:absolute;right: 10px;top:10px;">
+        <form  action="/name/movies/" method="get" onsubmit="location.href = this.action + this.mn.value; return false">
+            <input type="text" name="mn" id="mn" placeholder="Insert a Movie Name" required>
+            <button class="float-left submit-button">Go</button>
+        </form>

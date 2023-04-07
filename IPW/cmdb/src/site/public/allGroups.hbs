@@ -1,0 +1,27 @@
+
+
+<a href="/home">Home</a>
+
+<h2>All Groups</h2>
+
+{{#each groups}}
+
+<head>Grupo:{{this.name}}</head>
+<p>Description:{{this.description}}</p>
+<form action="/groups/find" method="post">
+<input type="hidden" name="id" id="id" value="{{this.id}}">
+<input type="submit" value="Go to Group '{{this.name}}'">
+</form>
+{{/each}}
+
+<div style=" position:absolute;right: 10px;top:10px;">
+        <form  action="/name/movies/" method="get" onsubmit="location.href = this.action + this.mn.value; return false">
+            <input type="text" name="mn" id="mn" placeholder="Insert a Movie Name" required>
+            <button class="float-left submit-button">Go</button>
+        </form
+        
+   
+    
+
+
+

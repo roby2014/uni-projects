@@ -1,0 +1,35 @@
+
+<a href="/home">Home</a>
+<body>
+    <h2>Get All Groups</h2>
+
+    <form action="/groups/all">
+        <button class="float-left submit-button">Go</button>
+      </form>
+</body>
+
+<body>
+    <h2>Get Group By Name</h2>
+    <form action="/groups/name/find" method="post">
+    <input type="text" name="name" id="name" placeholder="Insert a Group Name"  required>
+    <input type="submit" value="Go">
+    </form>   
+</body>
+
+<body>
+    <h2>Create a Group</h2>
+    <form action="/groups/create" method="post">
+    <body>
+        Name: <input type="text" name="name" id="name" placeholder="Insert a Group Name" required>
+        Description: <input type="text" name="description" id="description" placeholder="Insert a description" required>
+        <input type="submit" value="Go">
+    </body>
+        
+    </form>
+</body>
+
+<div style=" position:absolute;right: 10px;top:10px;">
+        <form  action="/name/movies/" method="get" onsubmit="location.href = this.action + this.mn.value; return false">
+            <input type="text" name="mn" id="mn" placeholder="Insert a Movie Name" required>
+            <button class="float-left submit-button">Go</button>
+        </form
