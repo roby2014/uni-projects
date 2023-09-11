@@ -1,0 +1,606 @@
+{
+  "openapi":"3.0.0",
+  "info":{
+    "title":"Tasks API",
+    "version":"v0.1.0",
+    "description":""
+  },
+  "tags":[
+
+  ],
+  "paths":{
+    "/api/boards":{
+      "post":{
+        "summary":"Creates a new board",
+        "description":null,
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+
+        ],
+        "responses":{
+          "201":{
+            "description":"Created board id",
+            "content":{
+
+            }
+          }
+        },
+        "security":[
+
+        ],
+        "operationId":"postApiBoards",
+        "deprecated":false
+      }
+    },
+    "/api/boards/{id}":{
+      "get":{
+        "summary":"Get the detailed information of a board",
+        "description":null,
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+          {
+            "schema":{
+              "type":"integer"
+            },
+            "in":"path",
+            "name":"id",
+            "required":true,
+            "description":null
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"Board",
+            "content":{
+
+            }
+          },
+          "400":{
+            "description":"Invalid board id",
+            "content":{
+
+            }
+          },
+          "404":{
+            "description":"Board not found",
+            "content":{
+
+            }
+          }
+        },
+        "security":[
+
+        ],
+        "operationId":"getApiBoards_id",
+        "deprecated":false
+      }
+    },
+    "/api/boards/{id}/lists":{
+      "get":{
+        "summary":"Get the lists of a board",
+        "description":null,
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+          {
+            "schema":{
+              "type":"integer"
+            },
+            "in":"path",
+            "name":"id",
+            "required":true,
+            "description":null
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"Board lists",
+            "content":{
+
+            }
+          },
+          "400":{
+            "description":"Invalid board id",
+            "content":{
+
+            }
+          },
+          "404":{
+            "description":"Board not found",
+            "content":{
+
+            }
+          }
+        },
+        "security":[
+
+        ],
+        "operationId":"getApiBoards_id_Lists",
+        "deprecated":false
+      },
+      "post":{
+        "summary":"Creates a new list on a board",
+        "description":"Query parameters: 'name' (list name)",
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+          {
+            "schema":{
+              "type":"integer"
+            },
+            "in":"path",
+            "name":"id",
+            "required":true,
+            "description":null
+          }
+        ],
+        "responses":{
+          "201":{
+            "description":"Created list id",
+            "content":{
+
+            }
+          },
+          "400":{
+            "description":"Invalid board id or no name query parameter",
+            "content":{
+
+            }
+          },
+          "404":{
+            "description":"Board not found",
+            "content":{
+
+            }
+          }
+        },
+        "security":[
+
+        ],
+        "operationId":"postApiBoards_id_Lists",
+        "deprecated":false
+      }
+    },
+    "/api/boards/{id}/users":{
+      "post":{
+        "summary":"Add a user to the board",
+        "description":"Query parameters: 'userId' (user identifier that will be added to the board)",
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+          {
+            "schema":{
+              "type":"integer"
+            },
+            "in":"path",
+            "name":"id",
+            "required":true,
+            "description":null
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"User boards",
+            "content":{
+
+            }
+          },
+          "400":{
+            "description":"Invalid board id or no userId query parameter",
+            "content":{
+
+            }
+          },
+          "404":{
+            "description":"User or Board not found",
+            "content":{
+
+            }
+          }
+        },
+        "security":[
+
+        ],
+        "operationId":"postApiBoards_id_Users",
+        "deprecated":false
+      }
+    },
+    "/api/cards/{id}":{
+      "get":{
+        "summary":"Get the detailed information of a card",
+        "description":null,
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+          {
+            "schema":{
+              "type":"integer"
+            },
+            "in":"path",
+            "name":"id",
+            "required":true,
+            "description":null
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"Card information",
+            "content":{
+
+            }
+          },
+          "400":{
+            "description":"Invalid card id",
+            "content":{
+
+            }
+          },
+          "404":{
+            "description":"Card not found",
+            "content":{
+
+            }
+          }
+        },
+        "security":[
+
+        ],
+        "operationId":"getApiCards_id",
+        "deprecated":false
+      },
+      "post":{
+        "summary":"Moves a card to a new destination",
+        "description":"Query parameters: 'listId' (destination list identifier)",
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+          {
+            "schema":{
+              "type":"integer"
+            },
+            "in":"path",
+            "name":"id",
+            "required":true,
+            "description":null
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"",
+            "content":{
+
+            }
+          },
+          "400":{
+            "description":"Invalid card id or no listId query parameter",
+            "content":{
+
+            }
+          },
+          "404":{
+            "description":"Card or list not found",
+            "content":{
+
+            }
+          }
+        },
+        "security":[
+
+        ],
+        "operationId":"postApiCards_id",
+        "deprecated":false
+      }
+    },
+    "/api/date":{
+      "get":{
+        "summary":"<unknown>",
+        "description":null,
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+
+        ],
+        "responses":{
+
+        },
+        "security":[
+
+        ],
+        "operationId":"getApiDate",
+        "deprecated":false
+      }
+    },
+    "/api/lists/{id}":{
+      "get":{
+        "summary":"Get detailed information of a list",
+        "description":null,
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+          {
+            "schema":{
+              "type":"integer"
+            },
+            "in":"path",
+            "name":"id",
+            "required":true,
+            "description":null
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"Lists information",
+            "content":{
+
+            }
+          },
+          "400":{
+            "description":"Invalid list id",
+            "content":{
+
+            }
+          },
+          "404":{
+            "description":"List not found",
+            "content":{
+
+            }
+          }
+        },
+        "security":[
+
+        ],
+        "operationId":"getApiLists_id",
+        "deprecated":false
+      }
+    },
+    "/api/lists/{id}/cards":{
+      "get":{
+        "summary":"Get the set of cards in a list",
+        "description":null,
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+          {
+            "schema":{
+              "type":"integer"
+            },
+            "in":"path",
+            "name":"id",
+            "required":true,
+            "description":null
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"Cards from list",
+            "content":{
+
+            }
+          },
+          "400":{
+            "description":"Invalid list id",
+            "content":{
+
+            }
+          },
+          "404":{
+            "description":"List not found",
+            "content":{
+
+            }
+          }
+        },
+        "security":[
+
+        ],
+        "operationId":"getApiLists_id_Cards",
+        "deprecated":false
+      },
+      "post":{
+        "summary":"Creates a new card in a list",
+        "description":null,
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+          {
+            "schema":{
+              "type":"integer"
+            },
+            "in":"path",
+            "name":"id",
+            "required":true,
+            "description":null
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"Card id",
+            "content":{
+
+            }
+          },
+          "400":{
+            "description":"Invalid list id",
+            "content":{
+
+            }
+          },
+          "404":{
+            "description":"List not found",
+            "content":{
+
+            }
+          }
+        },
+        "security":[
+
+        ],
+        "operationId":"postApiLists_id_Cards",
+        "deprecated":false
+      }
+    },
+    "/api/ping":{
+      "get":{
+        "summary":"<unknown>",
+        "description":null,
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+
+        ],
+        "responses":{
+
+        },
+        "security":[
+
+        ],
+        "operationId":"getApiPing",
+        "deprecated":false
+      }
+    },
+    "/api/users":{
+      "post":{
+        "summary":"Creates a new user",
+        "description":"Creates a new user, by receiving the following parameters: name & description",
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+
+        ],
+        "responses":{
+          "201":{
+            "description":"The created user token and id",
+            "content":{
+
+            }
+          },
+          "500":{
+            "description":"Error",
+            "content":{
+
+            }
+          }
+        },
+        "security":[
+
+        ],
+        "operationId":"postApiUsers",
+        "deprecated":false
+      }
+    },
+    "/api/users/{id}":{
+      "get":{
+        "summary":"Get user details",
+        "description":null,
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+          {
+            "schema":{
+              "type":"integer"
+            },
+            "in":"path",
+            "name":"id",
+            "required":true,
+            "description":null
+          }
+        ],
+        "responses":{
+          "400":{
+            "description":"Invalid id",
+            "content":{
+
+            }
+          },
+          "404":{
+            "description":"User not found",
+            "content":{
+
+            }
+          }
+        },
+        "security":[
+
+        ],
+        "operationId":"getApiUsers_id",
+        "deprecated":false
+      }
+    },
+    "/api/users/{id}/boards":{
+      "get":{
+        "summary":"Get the list with all user available boards",
+        "description":null,
+        "tags":[
+          "/api"
+        ],
+        "parameters":[
+          {
+            "schema":{
+              "type":"integer"
+            },
+            "in":"path",
+            "name":"id",
+            "required":true,
+            "description":null
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"User boards",
+            "content":{
+
+            }
+          },
+          "400":{
+            "description":"Invalid id",
+            "content":{
+
+            }
+          },
+          "404":{
+            "description":"User not found",
+            "content":{
+
+            }
+          }
+        },
+        "security":[
+
+        ],
+        "operationId":"getApiUsers_id_Boards",
+        "deprecated":false
+      }
+    }
+  },
+  "components":{
+    "schemas":{
+
+    },
+    "securitySchemes":{
+
+    }
+  },
+  "servers":[
+    {
+      "url":"/",
+      "description":""
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+docker run -d -p 9000:8080 --env PORT=8080 --env JDBC_DATABASE_URL="jdbc:postgresql://host.docker.internal/<database>?user=myuser&password=mypassword" robyawyx/img-ls-2223-2-42d-g14
