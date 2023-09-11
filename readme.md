@@ -16,6 +16,9 @@
 * [TDS](./TDS/) - Técnicas de Desenvolvimento de Software  /  Software Development Techniques
 * [IPW](./IPW/) - Introdução à Programação na Web  /  Introduction to Web Development
 
+### 4th semester
+* [LS](./LS/) - Laboratório de Software / Software laboratory
+
 ### Info
 *i)* *Most of the projects from this repository (task/reports) are not translated to english.*
 
